@@ -9,7 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
+import web.java.dao.BrandDAO;
+import web.java.dao.CategoryDAO;
+import web.java.dao.CollectionDAO;
+import web.java.dao.EventDAO;
 import web.java.dao.UserDAO;
 import web.java.model.User;
 
@@ -36,6 +39,10 @@ public class LoginServlet extends HttpServlet {
 	    throws ServletException, IOException {
 	response.setContentType("text/html;charset=UTF-8");
 	request.setCharacterEncoding("utf-8");
+	request.setAttribute("events", new EventDAO().getAllEvent());
+	request.setAttribute("brands", new BrandDAO().getAllBrand());
+	request.setAttribute("categories", new CategoryDAO().getAllCategory());
+	request.setAttribute("collections", new CollectionDAO().getAllCollection());
 	request.getRequestDispatcher("Page/web/login.jsp").forward(request, response);
     }
 

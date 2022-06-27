@@ -16,9 +16,27 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
 	integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="Page/css/web.css">
 <link rel="stylesheet" href="Page/css/login.css">
 <link rel="stylesheet" href="Page/css/cartMainCss.css">
+<link rel="stylesheet" href="Page/css/web.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="Page/css/cartMainCss.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="Page/css/cart33.css" type="text/css"
+	media="screen">
+<link rel="stylesheet"
+	href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
+	rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="Page/css/slick.css" />
+<link type="text/css" rel="stylesheet" href="Page/css/slick-theme.css" />
+<link type="text/css" rel="stylesheet"
+	href="Page/css/nouislider.min.css" />
+<link rel="stylesheet" href="Page/css/font-awesome.min.css">
 <title>Signup Dangu</title>
 </head>
 <body>
