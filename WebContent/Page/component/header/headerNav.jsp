@@ -11,19 +11,19 @@
 							class="header-nav__link"> <i class="fas fa-bars"></i>
 						</a></li>
 						<php:forEach items="${collections }" var="collection">
-							<li class="header-nav__child" style="z-index: 2">
+							<li class="header-nav__child" style="z-index: 99">
 							<a href=""
 								class="child-link">${collection.getName() } <i
 									class="fas fa-chevron-down"></i>
 							</a>
 								<div class="menu-makeup shadow-lg p-3 mb-5 bg-white rounded"
-									style="z-index: 2">
+									style="z-index: 99">
 									<div class="row" style="z-index: 2">
 										<php:if test="${collection.getId()==7 }">
 											<php:forEach items="${categories }" var="category">
 												<php:if
 													test="${category.getCollection() == collection.getId() }">
-													<div class="col-lg-6" style="z-index: 2">
+													<div class="col-lg-6" style="z-index: 99">
 														<ul class="list-makeup">
 															<li><a href="category?id=${category.getId() }">${category.getName() }</a></li>
 														</ul>
@@ -36,7 +36,7 @@
 											<php:forEach items="${categories }" var="category">
 												<php:if
 													test="${category.getCollection() == collection.getId() }">
-													<div class="col-lg-3" style="z-index: 2">
+													<div class="col-lg-3" style="z-index: 99">
 														<ul class="list-makeup">
 															<li><a href="category?id=${category.getId() }">${category.getName() }</a></li>
 														</ul>
@@ -54,7 +54,7 @@
 								Thương hiệu <i class="fas fa-chevron-down"></i>
 						</a>
 							<div class="menu-body shadow-lg p-3 mb-5 bg-white rounded"
-								style="z-index: 5">
+								style="z-index: 99">
 								<div class="row">
 									<php:forEach var="brand" items="${brands }">
 										<div class="col-lg-3">
@@ -71,7 +71,7 @@
 								Khuyến mãi <i class="fas fa-chevron-down"></i>
 						</a>
 							<div class="menu-body shadow-lg p-3 mb-5 bg-white rounded"
-								style="z-index: 5">
+								style="z-index: 99">
 								<div class="row">
 									<php:forEach var="event" items="${events }">
 										<div class="col-lg-3">

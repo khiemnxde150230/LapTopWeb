@@ -92,7 +92,7 @@
 									style="overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">${product.getTitle() }</th>
 								<th>${product.getRating() }</th>
 								<th>${product.getSold() }</th>
-								<th>${product.getPriceDefault() }</th>
+								<th>${product.getFormatPriceDefault() }</th>
 								<php:forEach items="${categories}" var="category">
 									<php:if test="${category.getId() == product.getCategory()}">
 										<th>"${category.getName() }"</th>

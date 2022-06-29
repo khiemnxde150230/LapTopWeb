@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,7 +80,7 @@
 					<div class="view-info">
 						<h4 class="view-info__title">
 							${productDetail.getTitle() }
-							</h2>
+							</h4>
 							<div class="view-rate">
 								<div class="rating-stars">
 									<i class="star--gold fas fa-star"></i> <i
@@ -104,6 +103,7 @@
 									<span class="percent-sale">-
 										${productDetail.getDiscount() }%</span>
 								</div>
+								<!--  
 								<div class="view-price__note">
 									<p>
 										Giá thị trường:
@@ -113,6 +113,7 @@
 										(<span>- 10%</span>)
 									</p>
 								</div>
+								-->
 							</div>
 							<div class="view-info__note">
 								<p class="view-info__text">${productDetail.getDescription()	 }</p>
@@ -137,9 +138,9 @@
 								<div class="option-quantity">
 									<div id="" class="btn btn-primary"
 										onclick="sub(${productDetail.getId() },0)">-</div>
-									<input type="text" class="input_number text-center" style="flex: 1"
-										id="${productDetail.getId() }" name="quantity" min="1"
-										max="20" value="1">
+									<input type="text" class="input_number text-center"
+										style="flex: 1" id="${productDetail.getId() }" name="quantity"
+										min="1" max="20" value="1">
 									<div id="" class="btn btn-primary"
 										onclick="add(${productDetail.getId() },0)">+</div>
 								</div>
@@ -147,7 +148,7 @@
 							<div>
 								<button
 									class="option-add__cart box shadow-lg btn btn-danger mt-4"
-									style="height: 50px;width: 100%; border-radius: 10px">
+									style="height: 50px; width: 100%; border-radius: 10px">
 									Thêm vào giỏ hàng</span>
 								</button>
 

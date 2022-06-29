@@ -90,7 +90,7 @@
 						<div class="form-group">
 							<label for="" style="font-size: 18px">Enter Price Value</label> <input
 								name="price" type="text" class="form-control"
-								value=${product.getPriceDefault() }>
+								value=${product.getFormatPriceDefault() }>
 						</div>
 						<div class="form-group">
 							<label for="" style="font-size: 18px">Select category</label> <select

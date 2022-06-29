@@ -93,7 +93,7 @@
 								<td>${product.getTitle() }</td>
 								<td>${product.getRating() }</td>
 								<td>${product.getSold() }</td>
-								<td>${product.getPriceDefault() }</td>
+								<td>${product.getFormatPriceDefault() } vnd</td>
 								<td><php:forEach items="${categories }" var="category">
 										<php:if test="${category.getId() == product.getCategory() }">
 											${category.getName() }

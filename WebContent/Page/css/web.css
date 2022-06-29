@@ -61,7 +61,6 @@
 }
 
 .contact-account:hover .contact-account__log {
-	
 	display: block;
 }
 
@@ -121,7 +120,7 @@
 
 .contact-account__login:hover, .contact-account__signup:hover {
 	color: #fff;
-	background-color: #359427;
+	background-color: #D10024;
 	cursor: pointer;
 }
 
@@ -311,8 +310,8 @@
 }
 
 .child-link:hover {
-	color: #fff;
-	background-color: #199427;
+	color: #D10024;
+	background-color: #15161D;
 }
 
 .header-search-and-cart {
@@ -1674,7 +1673,7 @@ textarea.input {
 }
 
 .header-links li a:hover {
-	color: #FFF;
+	color: #D10024;
 }
 
 .header-links li i {

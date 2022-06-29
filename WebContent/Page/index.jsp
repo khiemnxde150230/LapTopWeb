@@ -18,13 +18,17 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
 	integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
+	rel="stylesheet">
 <link rel="stylesheet" href="Page/css/web.css" type="text/css"
 	media="screen">
 <link rel="stylesheet" href="Page/css/cartMainCss.css" type="text/css"
 	media="screen">
-	
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+	rel="stylesheet">
 <link
 	href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
 	rel="stylesheet">
@@ -32,7 +36,7 @@
 <link type="text/css" rel="stylesheet" href="Page/css/slick-theme.css" />
 <link type="text/css" rel="stylesheet"
 	href="Page/css/nouislider.min.css" />
-<link rel="stylesheet" href="Page/css/font-awesome.min.css" >
+<link rel="stylesheet" href="Page/css/font-awesome.min.css">
 <title>Dangu Shop</title>
 <style type="text/css">
 .flickity-slider {
@@ -42,7 +46,7 @@
 </head>
 <body>
 	<%@include file="web/header.jsp"%>
-	<%@include file="component/header/section.jsp" %>
+	<%@include file="component/header/section.jsp"%>
 	<%@include file="component/header/headerCarousel.jsp"%>
 	<!-- PRODUCT -->
 	<div class="product product-wrapper-main">

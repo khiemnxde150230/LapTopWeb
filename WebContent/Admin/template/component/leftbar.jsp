@@ -73,16 +73,29 @@
 				</ul>
 			</div></li>
 		<li class="nav-item"><a class="nav-link"
-			data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+			data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="false"
 			aria-controls="ui-basic"> <i class="menu-icon mdi mdi-autorenew"></i>
 				<span class="menu-title">User</span> <i class="menu-arrow"></i>
 		</a>
-			<div class="collapse" id="ui-basic">
+			<div class="collapse" id="ui-basic2">
 				<ul class="nav flex-column sub-menu">
 					<li class="nav-item"><a class="nav-link" href="stcalUser">User
 							Statistical</a></li>
 					<li class="nav-item"><a class="nav-link" href="commentUser">User
 							Comment</a></li>
+				</ul>
+
+			</div></li>
+			
+		<li class="nav-item"><a class="nav-link"
+			data-bs-toggle="collapse" href="#ui-basic3" aria-expanded="false"
+			aria-controls="ui-basic"> <i class="menu-icon mdi mdi-autorenew"></i>
+				<span class="menu-title">Revenue</span> <i class="menu-arrow"></i>
+		</a>
+			<div class="collapse" id="ui-basic3">
+				<ul class="nav flex-column sub-menu">
+					<li class="nav-item"><a class="nav-link" href="stcalRevenue">Total Revenue</a></li>
+					<li class="nav-item"><a class="nav-link" href="stcalList">List product revenue</a></li>
 				</ul>
 
 			</div></li>

@@ -1,9 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <!DOCTYPE html>
 <html lang="en">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Admin Page</title>
@@ -56,79 +59,32 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; margin: 10px; width: 100%">
-					<h1 class="text-center">Please choose product to add quantity</h1>
+					<h1 class="text-center">Revenue Statistical</h1>
 					<table
-						class="table table-striped table-bordered table-hover text-center"
-						style="font-family:"TimesNewRoman", Times, serif; font-weight:300">
-						<tr class="table-primary">
-							<th>Image</th>
-							<th>Title</th>
-							<th>Rating</th>
-							<th>Sold</th>
-							<th>Price</th>
-							<th>Category</th>
-							<th>Brand</th>
-							<th>Discount</th>
-							<th>Quantity</th>
-							<th>Change</th>
+						class="table table-striped table-hover table-bordered text-center">
+						<tr>
+							<th>Day</th>
+							<th>Number of order</th>
+							<th>Total (NVD)</th>
 						</tr>
-						<php:forEach items="${products}" var="product">
-							<tr style="font-size: 20px; font-weight: 600">
-
-								<td><php:set value="${0 }" var="i" /> <php:forEach
-										items="${images}" var="image">
-										<php:if
-											test="${image.getProduct() == product.getId() && i==0 }">
-											<img style="width: 60px; height: 60px"
-												class="img-md rounded-circle" alt=""
-												src="${image.getImage() }">
-											<php:set value="${1 }" var="i" />
-										</php:if>
-									</php:forEach></td>
-								<td style="overflow:"hidden"; text-overflow:ellipsis; max-width: 25ch;" >${product.getTitle() }</td>
-								<td>${product.getRating() }</td>
-								<td>${product.getSold() }</td>
-								<td>${product.getFormatPriceDefault() }</td>
-								<php:forEach items="${categories}" var="category">
-									<php:if test="${category.getId() == product.getCategory()}">
-										<td>"${category.getName() }"</td>
-									</php:if>
-								</php:forEach>
-								<php:forEach items="${brands }" var="brand">
-									<php:if test="${product.getBrand() == brand.getId() }">
-										<td>"${brand.getName() }"</td>
-									</php:if>
-								</php:forEach>
-								<td>${product.getDiscount() }</td>
-								<form action="updateQtt" method="post" >
-									<input type="hidden" name="product" value="${product.getId() }" />
-									<td class="justify-content-center text-center"><input
-										class="form-control text-center" name="qtt"
-										value=${product.getQtt() } /></td>
-									<td><input type="submit" class="btn btn-success"
-										value="change" /></td>
-								</form>
-
-
+						<php:forEach items="${revenueEachs }" var="revenueEach" varStatus="i">
+							<tr style="font-weight: 700; font-family: Verdana, sans-serif;">
+								<td>${revenueEach.getDateFromTimeStamp() }</td>
+								<td>${revenueEach.getStatus() }</td>
+								<td>${revenueEach.getFormatTotal() }</td>
 							</tr>
+						</php:forEach>
+						
+						<tr style="font-weight: 700; font-size: 22px; font-family: Verdana, sans-serif;">
+							<td>Total</td>
+							<td>${totalOrder }</td>
+							<td>${revenueAll }</td>
+						</tr>
 
-						</php:forEach>
 					</table>
-					<div aria-label="Page navigation example"
-						class="d-flex justify-content-center row flex-wrap">
-						<php:forEach var="page" begin="1" end="${numberOfPage }">
-							<ul class="pagination" style="flex: 0 0 auto; width: 5%">
-								<li class="page-item"><a class="page-link"
-									href="updateQtt?page=${page}">${page }</a></li>
-							</ul>
-						</php:forEach>
-					</div>
 				</div>
 			</div>
-
 		</div>
-
-
 	</div>
 	<script src="../Admin/template/vendors/js/vendor.bundle.base.js"></script>
 	<script src="../Admin/template/vendors/chart.js/Chart.min.js"></script>

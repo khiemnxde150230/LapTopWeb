@@ -62,8 +62,7 @@
 						<button type="submit" class="btn btn-outline-secondary">Đăng
 							nhập</button>
 					</div>
-					<a href="home" class="login-not btn btn-success w-25">Quay về
-						trang chủ </a>
+					<a href="home" class="login-not btn btn-success w-25">Quay về trang chủ</a>
 				</form>
 			</div>
 		</div>
