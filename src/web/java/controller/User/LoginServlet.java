@@ -21,64 +21,70 @@ import web.java.model.User;
  */
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LoginServlet() {
-	super();
-	// TODO Auto-generated constructor stub
-    }
-
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	response.setContentType("text/html;charset=UTF-8");
-	request.setCharacterEncoding("utf-8");
-	request.setAttribute("events", new EventDAO().getAllEvent());
-	request.setAttribute("brands", new BrandDAO().getAllBrand());
-	request.setAttribute("categories", new CategoryDAO().getAllCategory());
-	request.setAttribute("collections", new CollectionDAO().getAllCollection());
-	request.getRequestDispatcher("Page/web/login.jsp").forward(request, response);
-    }
-
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	// TODO Auto-generated method stub
-	response.setContentType("text/html;charset=UTF-8");
-	request.setCharacterEncoding("utf-8");
-	String username = request.getParameter("username");
-	String password = request.getParameter("password");
-	String encodePass = new UserDAO().getEncodedString(password);
-	if(username.isEmpty() == true || password.isEmpty()==true) {
-	    request.setAttribute("mess", "Username and password must not empty");
-	    request.getRequestDispatcher("Page/web/login.jsp").forward(request, response);
-	}else {
-	    if(new UserDAO().login(username, encodePass) == true) {
-		Cookie userId = new Cookie("loginId", Integer.toString(new UserDAO().getUserByUsername(username).getId()) );
-		Cookie userName = new Cookie("loginName", new UserDAO().getUserByUsername(username).getUsername());
-		userId.setMaxAge(60*60*24);
-		userName.setMaxAge(60*60*24);
-		response.addCookie(userId);
-		response.addCookie(userName);
-		
-		HttpSession session = request.getSession();
-		session.setAttribute("loginSession", new UserDAO().getUserById(Integer.toString(new UserDAO().getUserByUsername(username).getId())));
-		System.out.println( ((User) session.getAttribute("loginSession")).getFullname());
-		response.sendRedirect("home");
-	    }else {
-		request.setAttribute("mess", "Wrong username and password, please check again");
-		request.getRequestDispatcher("Page/web/login.jsp").forward(request, response);
-	    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public LoginServlet() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("utf-8");
+		request.setAttribute("events", new EventDAO().getAllEvent());
+		request.setAttribute("brands", new BrandDAO().getAllBrand());
+		request.setAttribute("categories", new CategoryDAO().getAllCategory());
+		request.setAttribute("collections", new CollectionDAO().getAllCollection());
+		request.getRequestDispatcher("Page/web/login.jsp").forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("utf-8");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String encodePass = new UserDAO().getEncodedString(password);
+		if (username.isEmpty() == true || password.isEmpty() == true) {
+			request.setAttribute("mess", "Username and password must not empty");
+			request.getRequestDispatcher("Page/web/login.jsp").forward(request, response);
+		} else {
+			if (new UserDAO().login(username, encodePass) == true) {
+				Cookie userId = new Cookie("loginId",
+						Integer.toString(new UserDAO().getUserByUsername(username).getId()));
+				Cookie userName = new Cookie("loginName", new UserDAO().getUserByUsername(username).getUsername());
+				userId.setMaxAge(60 * 60 * 24);
+				userName.setMaxAge(60 * 60 * 24);
+				response.addCookie(userId);
+				response.addCookie(userName);
+
+				HttpSession session = request.getSession();
+				session.setAttribute("loginSession",
+						new UserDAO().getUserById(Integer.toString(new UserDAO().getUserByUsername(username).getId())));
+				System.out.println(((User) session.getAttribute("loginSession")).getFullname());
+				response.sendRedirect("home");
+			} else {
+				request.setAttribute("events", new EventDAO().getAllEvent());
+				request.setAttribute("brands", new BrandDAO().getAllBrand());
+				request.setAttribute("categories", new CategoryDAO().getAllCategory());
+				request.setAttribute("collections", new CollectionDAO().getAllCollection());
+				request.setAttribute("mess", "Wrong username and password, please check again");
+				request.getRequestDispatcher("Page/web/login.jsp").forward(request, response);
+			}
+		}
+	}
 
 }

@@ -192,7 +192,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				product = new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -276,7 +276,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -294,7 +294,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -343,7 +343,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -364,7 +364,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -385,7 +385,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -406,7 +406,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -427,7 +427,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -448,7 +448,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -469,7 +469,7 @@ public class ProductDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				products.add(new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5),
-						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+						rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10), rs.getInt(11)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

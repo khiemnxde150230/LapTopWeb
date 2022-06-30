@@ -97,10 +97,12 @@
 							<div class="product_wrapper_element">
 								<div class="product-img">
 									<img src="${product.getFirstImage() }" alt="">
-									<div class="product-label">
-										<span class="sale">-${product.getDiscount() }%</span> <span
-											class="new">NEW</span>
-									</div>
+									<php:if test="${product.getDiscount() != 0}">
+										<div class="product-label">
+											<span class="sale">-${product.getDiscount() }%</span> <span
+												class="new">NEW</span>
+										</div>
+									</php:if>
 								</div>
 								<div class="product-body">
 									<p class="product-category">${category }</p>
@@ -109,8 +111,10 @@
 									</h3>
 									<h4 class="product-price">
 										$ ${product.getFormatPriceStandard() }
-										<del class="product-old-price">$
-											${product.getFormatPriceDefault() }</del>
+										<php:if test="${product.getDiscount() != 0 }">
+											<del class="product-old-price">$
+												${product.getFormatPriceDefault() }</del>
+										</php:if>
 									</h4>
 									<p>Sold: ${product.getSold() }</p>
 									<div class="product-rating">
@@ -134,9 +138,18 @@
 									</div>
 								</div>
 								<div class="add-to-cart">
-									<button class="add-to-cart-btn">
-										<i class="fa fa-shopping-cart"></i> add to cart
-									</button>
+									<form action="addProductToCart" class="text-cener"
+										method="post">
+										<input type="hidden" name="productId"
+											value="${product.getId() }"> <input type="hidden"
+											id="${product.getId() }" name="quantity" value="${1}">
+										<input type="hidden" name="category"
+											value="${currentCategory }">
+										<button class="add-to-cart-btn">
+											<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+										</button>
+
+									</form>
 								</div>
 							</div>
 						</div>

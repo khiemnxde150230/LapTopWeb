@@ -2,6 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <div class="cart">
+	<php:if test="${cartItems.size() == 0 }">
+		<div class="container">
+			<h1 class="text-center text-danger">Không có gì trong giỏ hàng</h1>
+		</div>
+	</php:if>
 	<div class="container">
 		<div class="crumb">
 			<nav aria-label="breadcrumb">
@@ -64,7 +69,10 @@
 					<div class="col-lg-2">
 						<div class="cart-price__item">
 							<span class="product-sale__item-price-curr">${cartItem.getProduct().getFormatPriceStandard() }đ</span>
-							<span class="product-sale__item-price-old">${cartItem.getProduct().getFormatPriceDefault() }đ</span>
+							<php:if test="${cartItem.getProduct().getDiscount() != 0 }">
+								<span class="product-sale__item-price-old">${cartItem.getProduct().getFormatPriceDefault() }đ</span>
+							</php:if>
+
 						</div>
 					</div>
 					<div class="col-lg-2 text-center justify-content-center">
@@ -91,7 +99,7 @@
 					</div>
 					<div class="col-lg-1">
 						<div class="cart-info__delete">
-							<button class="btn btn-danger">Xóa</button>
+							<a href="removeProductInCart?productId=${cartItem.getProduct().getId() }" class="btn btn-danger">Xóa</a>
 						</div>
 					</div>
 				</div>

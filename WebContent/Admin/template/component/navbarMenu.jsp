@@ -63,7 +63,7 @@
 					class="form-control" placeholder="Search Here" title="Search here">
 			</form>
 		</li>
-		<li class="nav-item dropdown"><a class="nav-link count-indicator"
+		<li class="nav-item dropdown"><a class="nav-link count-indicator text-danger"
 			id="notificationDropdown" href="#" data-bs-toggle="dropdown"> <i
 				class="icon-mail icon-lg"></i>
 		</a>

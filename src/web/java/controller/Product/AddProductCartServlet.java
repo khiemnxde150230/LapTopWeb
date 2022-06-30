@@ -22,74 +22,68 @@ import web.java.model.CartItem;
  */
 @WebServlet("/addProductToCart")
 public class AddProductCartServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddProductCartServlet() {
-	super();
-	// TODO Auto-generated constructor stub
-    }
-
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	// TODO Auto-generated method stub
-
-    }
-
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	// TODO Auto-generated method stub
-	response.setContentType("text/html;charset=UTF-8");
-	request.setCharacterEncoding("utf-8");
-
-	String productId = request.getParameter("productId");
-	int qtt = Integer.parseInt(request.getParameter("quantity"));
-	int loginId = 0;
-
-	Cookie[] cookies = request.getCookies();
-	for (int i = 0; i < cookies.length; i++) {
-	    if ((cookies[i].getName()).compareTo("loginId") == 0) {
-		loginId = Integer.parseInt(cookies[i].getValue());
-	    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public AddProductCartServlet() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	HttpSession session = request.getSession(false);
-	Cart cart = ((Cart) session.getAttribute("cart")) != null ? 
-		(Cart) session.getAttribute("cart") : new Cart(loginId);
-	cart.addToCart(Integer.parseInt(productId), new CartItem(new ProductDAO().getProductById(productId), qtt), qtt);
-	session.setAttribute("cart", cart);
-	
-//	if (session.getAttribute("cart") == null) {
-//	    Cart cart = new Cart(loginId);
-//	    cart.addToCart(loginId, new CartItem(new ProductDAO().getProductById(productId), qtt), qtt);
-//	    session.setAttribute("cart", cart);
-//	    System.out.println(1);
-//	} else {
-//	    Cart cart = (Cart) session.getAttribute("cart");
-//	    cart.addToCart(loginId, new CartItem(new ProductDAO().getProductById(productId), qtt), qtt);
-//	    session.setAttribute("cart", cart);
-//	    System.out.println(2);
-//	}
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
 
-	
-	request.setAttribute("events", new EventDAO().getAllEvent());
-	request.setAttribute("brands", new BrandDAO().getAllBrand());
-	request.setAttribute("categories", new CategoryDAO().getAllCategory());
-	request.setAttribute("collections", new CollectionDAO().getAllCollection());
-	request.setAttribute("productDetail", new ProductDAO().getProductById(productId));
-	request.setAttribute("listImages", new ProductDAO().getProductById(productId).getListImg());
+	}
 
-	request.getRequestDispatcher("/Page/productDetail.jsp").forward(request, response);
-    }
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("utf-8");
+
+		String productId = request.getParameter("productId");
+		int qtt = Integer.parseInt(request.getParameter("quantity"));
+		int loginId = 0;
+
+		Cookie[] cookies = request.getCookies();
+		for (int i = 0; i < cookies.length; i++) {
+			if ((cookies[i].getName()).compareTo("loginId") == 0) {
+				loginId = Integer.parseInt(cookies[i].getValue());
+			}
+		}
+
+		HttpSession session = request.getSession(false);
+		Cart cart = ((Cart) session.getAttribute("cart")) != null ? (Cart) session.getAttribute("cart")
+				: new Cart(loginId);
+		cart.addToCart(Integer.parseInt(productId), new CartItem(new ProductDAO().getProductById(productId), qtt), qtt);
+		session.setAttribute("cart", cart);
+
+		request.setAttribute("events", new EventDAO().getAllEvent());
+		request.setAttribute("brands", new BrandDAO().getAllBrand());
+		request.setAttribute("categories", new CategoryDAO().getAllCategory());
+		request.setAttribute("collections", new CollectionDAO().getAllCollection());
+		request.setAttribute("productDetail", new ProductDAO().getProductById(productId));
+		request.setAttribute("listImages", new ProductDAO().getProductById(productId).getListImg());
+		
+		if(request.getParameter("category") != null ) {
+			response.sendRedirect("./category?id=" + request.getParameter("category"));			
+		}else {
+			request.getRequestDispatcher("/Page/productDetail.jsp").forward(request, response);			
+		}
+		
+		
+		
+	}
 
 }

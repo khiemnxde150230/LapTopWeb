@@ -35,7 +35,7 @@
 <link type="text/css" rel="stylesheet"
 	href="Page/css/nouislider.min.css" />
 <link rel="stylesheet" href="Page/css/font-awesome.min.css">
-<title>Dangu Shop</title>
+<title>Flap Shop</title>
 
 <title>Document</title>
 </head>
@@ -78,32 +78,35 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="view-info">
-						<h4 class="view-info__title">
-							${productDetail.getTitle() }
-							</h4>
-							<div class="view-rate">
-								<div class="rating-stars">
-									<i class="star--gold fas fa-star"></i> <i
-										class="star--gold fas fa-star"></i> <i
-										class="star--gold fas fa-star"></i> <i
-										class="star--gold fas fa-star"></i> <i
-										class="star--gold  fas fa-star"></i>
-								</div>
-								<div class="text-ratings">
-									<p>
-										<span>${productDetail.getRating() }</span> sao - <span>62</span>
-										Đánh giá
-									</p>
-								</div>
+						<h4 class="view-info__title text-red">${productDetail.getTitle() }</h4>
+						<div class="view-rate">
+							<div class="rating-stars">
+								<i class="star--gold fas fa-star"></i> <i
+									class="star--gold fas fa-star"></i> <i
+									class="star--gold fas fa-star"></i> <i
+									class="star--gold fas fa-star"></i> <i
+									class="star--gold  fas fa-star"></i>
 							</div>
-							<div class="view-price">
-								<div class="view-price__sale">
-									<span class="curr-price">${productDetail.getFormatPriceStandard() }đ</span>
+							<div class="text-ratings">
+								<p>
+									<span>${productDetail.getRating() }</span> sao - <span>62</span>
+									Đánh giá
+								</p>
+							</div>
+						</div>
+
+						<div class="view-price">
+							<div class="view-price__sale">
+								<span class="curr-price">${productDetail.getFormatPriceStandard() }đ</span>
+								<php:if test="${productDetail.getDiscount() != 0 }">
 									<span class="old-price">${productDetail.getFormatPriceDefault() }đ</span>
 									<span class="percent-sale">-
 										${productDetail.getDiscount() }%</span>
-								</div>
-								<!--  
+								</php:if>
+
+
+							</div>
+							<!--  
 								<div class="view-price__note">
 									<p>
 										Giá thị trường:
@@ -114,10 +117,13 @@
 									</p>
 								</div>
 								-->
-							</div>
-							<div class="view-info__note">
-								<p class="view-info__text">${productDetail.getDescription()	 }</p>
-							</div>
+						</div>
+						<div class="text-red font-weight-bold">
+							Còn lại: <span>${productDetail.getQtt() }</span>
+						</div>
+						<div class="view-info__note">
+							<p class="view-info__text">${productDetail.getDescription()	 }</p>
+						</div>
 					</div>
 					<div class="option-view">
 						<!--  
@@ -130,22 +136,26 @@
 							</div>
 						</div>
 						-->
-						<form action="addProductToCart" class="text-cener" method="post">
+						<form action="addProductToCart" class="text-cener row d-flex justify-content-between align-items-center" method="post" id="formAddToCart">
 							<input type="hidden" name="productId"
 								value="${productDetail.getId() }">
-							<div class="choose-quantity">
-								<span>Số lượng : </span>
-								<div class="option-quantity">
-									<div id="" class="btn btn-primary"
+							<div class="choose-quantity col-md-6">
+								<p class="col-md-4 m-0 text-red font-weight-bold">Số lượng :</p>
+								<div class="option-quantity col-md-8">
+									<div id="" class="btn btn-danger text-light btn-none-border col-md-2"
 										onclick="sub(${productDetail.getId() },0)">-</div>
 									<input type="text" class="input_number text-center"
 										style="flex: 1" id="${productDetail.getId() }" name="quantity"
 										min="1" max="20" value="1">
-									<div id="" class="btn btn-primary"
+									<div id="" class="btn btn-danger text-light btn-none-border col-md-2"
 										onclick="add(${productDetail.getId() },0)">+</div>
 								</div>
 							</div>
-							<div>
+							<div class="text-center add-to-cart-btn col-md-4" style="line-height: 36px" onclick="checkNumber(${productDetail.getQtt()})">
+								<i class="fa fa-shopping-cart"></i> add to cart
+							</div>
+							<!-- 
+							<div class="col-md-6">
 								<button
 									class="option-add__cart box shadow-lg btn btn-danger mt-4"
 									style="height: 50px; width: 100%; border-radius: 10px">
@@ -153,8 +163,10 @@
 								</button>
 
 							</div>
+							
+							 -->
 						</form>
-
+						<p class="text-red font-weight-bold" id="message"></p>
 					</div>
 				</div>
 				<div class="col-lg-2"></div>
@@ -163,7 +175,29 @@
 		<div></div>
 	</div>
 	<%@include file="web/footer.jsp"%>
+	<script type="text/javascript">
+		const checkNumber = (maxNumber) => {
+			console.log("Text");	
+			const maxValue = $("input[name=quantity]").val();
+			let message = "";
+			console.log(maxValue);
+			if(isNaN(maxValue)){
+				message = "Quantity must be number";
+				$("#message").html(message);
+			}else {
+				if(maxValue > maxNumber){
+					message = "Quantity out of range !";
+					$("#message").html(message);
+				}else{ 
+					$("form[id=formAddToCart]").submit();
+				}
+			}
+			
+		}
+	</script>
 </body>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+
 <script
 	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 	integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
