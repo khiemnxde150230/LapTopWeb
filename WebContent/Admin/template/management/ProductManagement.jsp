@@ -53,12 +53,12 @@
 			<%@include file="../component/logoInfo.jsp"%>
 			<%@include file="../component/navbarMenu.jsp"%>
 		</nav>
-		<div class="container-fluid page-body-wrapper">
+		<div class="page-body-wrapper">
 			<%@include file='../component/themeSetting.jsp'%>
 			<%@include file="../component/leftbar.jsp"%>
 			<div class="main-panel">
 				<div class="content-wrapper"
-					style="padding: 20px; margin: 10px; width: auto">
+					style="padding: 20px; width: auto">
 					<a href="addProduct" class="btn btn-primary">Add more product</a>
 					<h1 class="text-center">List Product</h1>
 					<table

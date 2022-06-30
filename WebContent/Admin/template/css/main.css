@@ -1,7 +1,5 @@
 .main-panel {
 	width: 90%;
-	margin: auto;
-	border: 3px solid red;
 	border-radius: 10px;
 }
 
@@ -34,4 +32,25 @@
 .navbar-menu-wrapper, .navbar-brand-wrapper, #sidebar{
 	background: #000 !important;
 	color: #D10024 !important;
+}
+
+
+
+.sidebar .nav .nav-item.nav-category {
+	color: #D10024 !important;
+	font-weight: 600;
+}
+
+.sidebar .nav .nav-item .nav-link i.menu-icon, .sidebar .nav .nav-item .nav-link .menu-title {
+	color: #D10024 !important;
+	font-weight: 600;
+}
+
+.sidebar .nav.sub-menu .nav-item .nav-link.active{
+	color: #D10024 !important;
+	text-decoration: underline;
+}
+
+.sidebar .nav .nav-item .nav-link {
+	border-radius: 0px;
 }

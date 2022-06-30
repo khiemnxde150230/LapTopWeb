@@ -30,7 +30,7 @@
 							<div class="carousel-caption d-none d-md-block"></div>
 						</div>
 						<div class="carousel-item">
-							<img src="Page/img/img2.jpg" class="d-block w-100" alt="...">
+							<img src="Page/img/img2.jpg" class="d-block w-100" style="height: 341px" alt="...">
 							<div class="carousel-caption d-none d-md-block"></div>
 						</div>
 						<div class="carousel-item">

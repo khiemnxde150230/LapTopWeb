@@ -1,10 +1,10 @@
 <div class="navbar-menu-wrapper d-flex align-items-top">
 	<ul class="navbar-nav">
-		<li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-			<h1 class="welcome-text">
-				Welcome back, <span class="text-black fw-bold">${userLogin.getFullname() }</span>
+		<li class="nav-item font-weight-semibold d-none d-lg-block ms-0" >
+			<h1 class="welcome-text text-danger">
+				Welcome back, <span class="text-light fw-bold">${userLogin.getFullname() }</span>
 			</h1>
-			<h3 class="welcome-sub-text">ADMIN PAGE</h3>
+			<h3 class="welcome-sub-text text-danger font-weight-bolder">ADMIN PAGE</h3>
 		</li>
 	</ul>
 	<ul class="navbar-nav ms-auto">

@@ -34,6 +34,9 @@
 <link rel="stylesheet"
 	href="../Admin/template/css/vertical-layout-light/style.css"
 	type="text/css" media="screen">
+<link rel="stylesheet"
+	href="../Admin/template/css/main.css"
+	type="text/css">
 <link rel="shortcut icon" href="Admin/template/images/favicon.png" />
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -48,7 +51,7 @@
 			<%@include file="./component/logoInfo.jsp"%>
 			<%@include file="./component/navbarMenu.jsp"%>
 		</nav>
-		<div class="container-fluid page-body-wrapper">
+		<div class="page-body-wrapper">
 			<%@include file='./component/themeSetting.jsp'%>
 			<%@include file="./component/leftbar.jsp"%>
 			<div class="main-panel border rounded border-danger">

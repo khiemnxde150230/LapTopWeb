@@ -51,7 +51,7 @@
 			<%@include file="../component/logoInfo.jsp"%>
 			<%@include file="../component/navbarMenu.jsp"%>
 		</nav>
-		<div class="container-fluid page-body-wrapper">
+		<div class="page-body-wrapper">
 			<%@include file='../component/themeSetting.jsp'%>
 			<%@include file="../component/leftbar.jsp"%>
 			<div class="main-panel">
