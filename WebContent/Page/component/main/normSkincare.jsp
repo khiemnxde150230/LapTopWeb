@@ -5,7 +5,7 @@
 <div class="product-norm">
 	<div class="product-norm__header">
 		<div class="product-norm__tilte">
-			<h4>SẢN PHẨM SKIN CARE</h4>
+			<h4>PC</h4>
 		</div>
 	</div>
 	<ul class="product-norm__nav">
@@ -13,7 +13,7 @@
 		<php:forEach items="${saleMakeups }" var="step" varStatus="i">
 			<php:if test="${i.count == 1 }">
 				<li class="product-norm__active col-md-2">
-					<p>TRANG ĐIỂM</p>
+					<p>PC</p>
 				</li>
 			</php:if>
 			<php:if test="${i.count != 1 }">

@@ -479,7 +479,43 @@ public class ProductDAO {
 	}
 	
 	
+	public double getProductRatingById(int id) {
+		double rate = 5.0;
+		String query = "select avg(rating) from comment where rating_product_id = ? group by rating_product_id ;";
+		
+		try {
+			conn = new ConnectDB().getDBConnection();
+			ps = conn.prepareStatement(query);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				rate = rs.getDouble(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//System.out.println(products);
+		return rate;
+	}
 	
+	public int getNumberPersonRating(int id) {
+		int rate = 0;
+		String query = "select count(rating) from comment where rating_product_id = ? group by rating_product_id ;";
+		
+		try {
+			conn = new ConnectDB().getDBConnection();
+			ps = conn.prepareStatement(query);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				rate = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//System.out.println(products);
+		return rate;
+	}
 	
 	
 

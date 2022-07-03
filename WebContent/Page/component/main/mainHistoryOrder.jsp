@@ -96,6 +96,18 @@
 					<div class="cart_list_order_status_price" style="width: 15%">
 						${his.getFormatTotal() }₫</div>
 				</div>
+				<php:if test="${his.getStatus() == -1 }">
+					<div class="d-flex m-4 p-4">
+						<div class="col-md-6 text-red">Bạn có thể đánh giá ngay bây
+							giờ</div>
+						<form action="evaluate" method="GET" class="col-md-6">
+						<input type="hidden" name="orderId" value="${his.getId() }" />
+							<button
+								class="btn btn-success rounded-0 border border-primary col-md-12 font-weight-bolder"
+								style="background-color: #D10024; color: #15161D">Đánh giá</button>
+						</form>
+					</div>
+				</php:if>
 			</div>
 		</php:forEach>
 	</div>

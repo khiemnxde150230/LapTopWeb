@@ -220,6 +220,24 @@ public class Order {
 		return orderSingles;
 	}
 	
+	public List<OrderSingle> getOrderSingleByOrderTotal(String id) {
+		List<OrderSingle> orderSingles = new ArrayList<OrderSingle>();
+		String query = "select * from ordersingle where orderTotal_id = ?";
+		try {
+			conn = new ConnectDB().getDBConnection();
+			ps = conn.prepareStatement(query);
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				orderSingles.add(
+						new OrderSingle(rs.getInt(1), rs.getInt(2), rs.getFloat(3), rs.getInt(4), rs.getString(5)));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return orderSingles;
+	}
+	
 	public List<OrderSingle> getSingleProductStatictical() {
 		List<OrderSingle> orderSingles = new ArrayList<OrderSingle>();
 		String query = "select product_id, price*sum(number), sum(number) from laptopweb.ordersingle group by product_id;";
@@ -235,6 +253,24 @@ public class Order {
 			e.printStackTrace();
 		}
 		return orderSingles;
+	}
+	
+	public OrderTotal getOrderTotalById(String id) {
+		OrderTotal orderTotal = null;
+		String query = "select * from ordertotal where id = ?";
+		try {
+			conn = new ConnectDB().getDBConnection();
+			ps = conn.prepareStatement(query);
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				orderTotal = new OrderTotal(rs.getString(1), rs.getFloat(2), rs.getString(3), rs.getInt(4), rs.getInt(5),
+								rs.getString(6), rs.getFloat(7), rs.getInt(8), rs.getString(9), rs.getTimestamp(10));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return orderTotal;
 	}
 	
 	
@@ -303,6 +339,8 @@ public class Order {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 	public static void main(String args[]) {
 		String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789" + "abcdefghijklmnopqrstuvxyz";

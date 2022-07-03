@@ -79,7 +79,7 @@ public class AddProductCartServlet extends HttpServlet {
 		if(request.getParameter("category") != null ) {
 			response.sendRedirect("./category?id=" + request.getParameter("category"));			
 		}else {
-			request.getRequestDispatcher("/Page/productDetail.jsp").forward(request, response);			
+			response.sendRedirect("./product_detail?id=" + request.getParameter("productId"));			
 		}
 		
 		

@@ -5,6 +5,7 @@ import java.util.List;
 import web.java.dao.BrandDAO;
 import web.java.dao.CategoryDAO;
 import web.java.dao.ImageDAO;
+import web.java.dao.ProductDAO;
 
 public class Product {
 	private int id;
@@ -173,6 +174,14 @@ public class Product {
 
 	public List<Image> getListImg() {
 		return (new ImageDAO().getAllImageById(Integer.toString(this.id)));
+	}
+	
+	public double getTrueRating() {
+		return new ProductDAO().getProductRatingById(getId());
+	}
+	
+	public int getNumberPersonRating() {
+		return new ProductDAO().getNumberPersonRating(getId());
 	}
 
 	@Override

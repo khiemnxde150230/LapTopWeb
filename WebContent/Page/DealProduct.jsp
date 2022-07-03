@@ -35,7 +35,7 @@
 <link type="text/css" rel="stylesheet"
 	href="Page/css/nouislider.min.css" />
 <link rel="stylesheet" href="Page/css/font-awesome.min.css" >
-<title>Dangu Shop Cart</title>
+<title>Deal</title>
 <style type="text/css">
 </style>
 </head>

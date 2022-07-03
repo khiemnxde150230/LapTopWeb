@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="Page/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-<title>Dangu Shop</title>
+<title>Profile</title>
 <style type="text/css">
 .flickity-slider {
 	

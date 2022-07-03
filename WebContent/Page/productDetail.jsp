@@ -49,6 +49,7 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="home">Trang chủ</a></li>
+						<li class="breadcrumb-item active" aria-current="page">${productDetail.getCategoryName() }</li>
 						<li class="breadcrumb-item active" aria-current="page">${productDetail.getTitle() }</li>
 					</ol>
 				</nav>
@@ -89,12 +90,12 @@
 							</div>
 							<div class="text-ratings">
 								<p>
-									<span>${productDetail.getRating() }</span> sao - <span>62</span>
+									<span>${productDetail.getTrueRating() }</span> sao - <span>${productDetail.getNumberPersonRating()  }</span>
 									Đánh giá
 								</p>
 							</div>
 						</div>
-
+						
 						<div class="view-price">
 							<div class="view-price__sale">
 								<span class="curr-price">${productDetail.getFormatPriceStandard() }đ</span>
@@ -136,22 +137,28 @@
 							</div>
 						</div>
 						-->
-						<form action="addProductToCart" class="text-cener row d-flex justify-content-between align-items-center" method="post" id="formAddToCart">
+						<form action="addProductToCart"
+							class="text-cener row d-flex justify-content-between align-items-center"
+							method="post" id="formAddToCart">
 							<input type="hidden" name="productId"
 								value="${productDetail.getId() }">
 							<div class="choose-quantity col-md-6">
 								<p class="col-md-4 m-0 text-red font-weight-bold">Số lượng :</p>
 								<div class="option-quantity col-md-8">
-									<div id="" class="btn btn-danger text-light btn-none-border col-md-2"
+									<div id=""
+										class="btn btn-danger text-light btn-none-border col-md-2"
 										onclick="sub(${productDetail.getId() },0)">-</div>
 									<input type="text" class="input_number text-center"
 										style="flex: 1" id="${productDetail.getId() }" name="quantity"
 										min="1" max="20" value="1">
-									<div id="" class="btn btn-danger text-light btn-none-border col-md-2"
+									<div id=""
+										class="btn btn-danger text-light btn-none-border col-md-2"
 										onclick="add(${productDetail.getId() },0)">+</div>
 								</div>
 							</div>
-							<div class="text-center add-to-cart-btn col-md-4" style="line-height: 36px" onclick="checkNumber(${productDetail.getQtt()})">
+							<div class="text-center add-to-cart-btn col-md-4"
+								style="line-height: 36px"
+								onclick="checkNumber(${productDetail.getQtt()})">
 								<i class="fa fa-shopping-cart"></i> add to cart
 							</div>
 							<!-- 
@@ -172,7 +179,54 @@
 				<div class="col-lg-2"></div>
 			</div>
 		</div>
-		<div></div>
+		<div class="container border border-danger"
+			style="margin-top: 100px; padding: 30px 30px">
+			<h2 class="text-red font-weight-bold">Đánh giá sản phẩm</h2>
+
+			
+			<div
+				class="rating-header d-flex justify-content-center align-items-center">
+				<h4 class="text-red font-weight-bold mr-5 mb-0"
+					style="margin-right: 4rem">${productDetail.getTrueRating() } trên
+					5.0</h4>
+				<div class="row d-flex" style="flex: 1">
+					<div class="col-md-2 m-3 btn btn-danger">Tất cả</div>
+					<div class="col-md-1 m-3 btn btn-success">5 sao</div>
+					<div class="col-md-1 m-3 btn btn-success">4 sao</div>
+					<div class="col-md-1 m-3 btn btn-success">3 sao</div>
+					<div class="col-md-1 m-3 btn btn-success">2 sao</div>
+					<div class="col-md-1 m-3 btn btn-success">1 sao</div>
+				</div>
+			</div>
+			
+			<php:if test="${comments.size() == 0 }">
+				<h5 class="text-danger">Chưa có đánh giá nào</h5>
+			</php:if>
+			
+			<div
+				class="rating-content d-flex justify-content-center align-items-center">
+				<div class="comment-content-wrapper">
+					<php:forEach items="${comments }" var="comment">
+						<div class="comment-content-element border border-success p-2 mt-2 mb-2">
+							<div class="comment-content-user d-flex">
+								<img src="${comment.getUserObject().getAvatar() }" class="mr-4" />
+								<div class="comment-content-user-info-buy ">
+									<h6 class="text-red">${comment.getUserObject().getFullname() }
+										<span> (${comment.getRating()}) </span>
+									</h6>
+									<p>Thời gian đặt hàng:
+										${comment.getOrderTotal().getTimeOrderString() }</p>
+								</div>
+							</div>
+							<img src="${comment.getImage() }" />
+							<p>=> ${comment.getComment() }</p>
+						</div>
+					</php:forEach>
+				</div>
+			</div>
+
+
+		</div>
 	</div>
 	<%@include file="web/footer.jsp"%>
 	<script type="text/javascript">

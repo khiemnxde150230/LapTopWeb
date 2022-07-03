@@ -19,54 +19,53 @@ import web.java.dao.Order;
  */
 @WebServlet("/history")
 public class HistoryOrderServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public HistoryOrderServlet() {
-	super();
-	// TODO Auto-generated constructor stub
-    }
-
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	// TODO Auto-generated method stub
-	response.setContentType("text/html;charset=UTF-8");
-	request.setCharacterEncoding("utf-8");
-	
-	
-	int loginId = -1;
-	Cookie[] cookies = request.getCookies();
-	for (int i = 0; i < cookies.length; i++) {
-	    if ((cookies[i].getName()).compareTo("loginId") == 0) {
-		loginId = Integer.parseInt(cookies[i].getValue());
-	    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public HistoryOrderServlet() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	System.out.print(loginId);
-	
-	request.setAttribute("historyTransactions", new Order().getAllHistoryTransactionById(loginId));
-	request.setAttribute("historySingleTransactions", new Order().getAllOrderSingleById(loginId));
-	request.setAttribute("saleMakeups", new CategoryDAO().getMakeupCate());
-	request.setAttribute("events", new EventDAO().getAllEvent());
-	request.setAttribute("brands", new BrandDAO().getAllBrand());
-	request.setAttribute("categories", new CategoryDAO().getAllCategory());
-	request.setAttribute("collections", new CollectionDAO().getAllCollection());
-	request.getRequestDispatcher("/Page/historyOrder.jsp").forward(request, response);
-    }
 
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	// TODO Auto-generated method stub
-	doGet(request, response);
-    }
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("utf-8");
+
+		int loginId = -1;
+		Cookie[] cookies = request.getCookies();
+		for (int i = 0; i < cookies.length; i++) {
+			if ((cookies[i].getName()).compareTo("loginId") == 0) {
+				loginId = Integer.parseInt(cookies[i].getValue());
+			}
+		}
+		System.out.print(loginId);
+
+		request.setAttribute("historyTransactions", new Order().getAllHistoryTransactionById(loginId));
+		request.setAttribute("historySingleTransactions", new Order().getAllOrderSingleById(loginId));
+		request.setAttribute("saleMakeups", new CategoryDAO().getMakeupCate());
+		request.setAttribute("events", new EventDAO().getAllEvent());
+		request.setAttribute("brands", new BrandDAO().getAllBrand());
+		request.setAttribute("categories", new CategoryDAO().getAllCategory());
+		request.setAttribute("collections", new CollectionDAO().getAllCollection());
+		request.getRequestDispatcher("/Page/historyOrder.jsp").forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
 
 }

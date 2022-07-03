@@ -22,6 +22,8 @@
 	media="screen">
 <link rel="stylesheet" href="Page/css/cartMainCss.css" type="text/css"
 	media="screen">
+<link rel="stylesheet" href="Page/css/cart33.css" type="text/css"
+	media="screen">
 <link rel="stylesheet"
 	href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -33,7 +35,7 @@
 <link type="text/css" rel="stylesheet"
 	href="Page/css/nouislider.min.css" />
 <link rel="stylesheet" href="Page/css/font-awesome.min.css" >
-<title>Flap Shop Cart</title>
+<title>History Order</title>
 <style type="text/css">
 </style>
 </head>
@@ -42,7 +44,7 @@
 	<!-- PRODUCT -->
 	<div class="product">
 		<div class="container">
-			<%@include file="component/main/viewcart.jsp"%>
+			<%@include file="component/main/evaluate.jsp"%>
 		</div>
 	</div>
 	<%@include file="component/header/headerCarousel.jsp"%>
@@ -63,42 +65,4 @@
 <script type="text/javascript"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-	function addAjax(productId, qtt) {
-		$.ajax({
-			url : "addProductToCart",
-			type : "post",
-			data : {
-				productId: productId,
-				quantity: 1
-			},
-			success : function(response) {
-				
-			},
-			error : function(xhr) {
-				console.log(textStatus, errorThrown);
-			}
-		});
-	}
-	
-	function subAjax(productId, qtt) {
-		if(qtt <= 1){
-			return;
-		}
-		$.ajax({
-			url : "addProductToCart",
-			type : "post",
-			data : {
-				productId: productId,
-				quantity: -1
-			},
-			success : function(response) {
-				
-			},
-			error : function(xhr) {
-				console.log(textStatus, errorThrown);
-			}
-		});
-	}
-</script>
 </html>
