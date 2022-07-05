@@ -31,7 +31,12 @@
 				<div class="col">
 					<div
 						class="product-norm__items shadow-lg p-3 mb-5 bg-white rounded"
-						style="height: 410px">
+						style="height: 410px; position: relative">
+						<php:if test="${makeup.getDiscount() != 0 }">
+							<div
+								style="position: absolute; top: 0px; right: 0px; background-color: #D10024; color: #15161D; padding: 4px 16px">-${makeup.getDiscount() }%</div>
+						</php:if>
+
 						<div class="product-norm__img">
 							<a href="product_detail?id=${makeup.getId() }"> <img
 								src="${makeup.getFirstImage() }" alt="">

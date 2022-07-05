@@ -23,9 +23,9 @@
 							<span>Tài khoản</span> <i class="icon-down fas fa-chevron-down"></i>
 						</div>
 						<div class="contact-account__log" style="z-index: 10">
-							<a href="login" class="contact-account__login"> <span>Đăng
+							<a href="login" class="contact-account__login"> <span class="element_text">Đăng
 									nhập</span>
-							</a> <a href="signup" class="contact-account__signup"> <span>Đăng
+							</a> <a href="signup" class="contact-account__signup"> <span class="element_text">Đăng
 									ký</span>
 							</a>
 						</div>

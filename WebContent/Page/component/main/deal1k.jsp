@@ -27,13 +27,15 @@
 			<div class="product-sale__body">
 				<div class="carousel"
 					data-flickity='{ "freeScroll": true, "wrapAround": true, "pageDots": false, "autoPlay": true }'>
+					
+					<!-- Event number 5 -->
 					<php:forEach items="${flashdeal2s }" var="flashdeal1">
 						<div class="col-lg-2 carousel-cell">
 							<a href="product_detail?id=${flashdeal1.getId() }"
 								class="product-sale__item">
-								<div class="product-sale__item-img" style="padding-top: 10px">
+								<div class="product-sale__item-img" style="padding-top: 10px" >
 									<img alt="" src="${flashdeal1.getFirstImage()}"
-										style="width: 100%; height: 180px"">
+										style="width: 100%; height: 180px" />
 								</div>
 								<p class="product-sale__item-name">${flashdeal1.getTitle() }</p>
 								<div class="product-sale__item-price">

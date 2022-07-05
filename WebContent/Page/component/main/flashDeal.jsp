@@ -21,7 +21,7 @@
 					</div>
 				</div>
 				<div class="product-sale__direct">
-					<a href="event?id=8" target="__blank" class="text-danger">XEM
+					<a href="event?id=3" target="__blank" class="text-danger">XEM
 						TẤT CẢ DEAL =></a>
 				</div>
 			</div>

@@ -61,6 +61,8 @@
 				</php:forEach>
 			</div>
 			<%@include file="component/main/saleProduct.jsp"%>
+			
+			<!-- Event id = 8 -->
 			<div class="text-center d-flex justify-content-center"
 				id="seemorebtn">
 				<button class="btn btn-dark">Xem thêm</button>

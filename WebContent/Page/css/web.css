@@ -68,8 +68,16 @@
 	display: block;
 }
 
-.contact-account:hover .contact-account__create {
-	color: red;
+.contact-account:hover .contact-account__log {
+	display: block;
+}
+
+.element_text{
+	color: white;
+}
+
+.contact-account__login:hover .element_text {
+	color: #15161D;
 }
 
 .contact-product::after {
@@ -1738,6 +1746,7 @@ textarea.input {
 }
 
 .header-search form {
+	width: 100%;
 	position: relative;
 }
 
