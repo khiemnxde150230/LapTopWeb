@@ -96,6 +96,7 @@
 				<ul class="nav flex-column sub-menu">
 					<li class="nav-item"><a class="nav-link" href="stcalRevenue">Total Revenue</a></li>
 					<li class="nav-item"><a class="nav-link" href="stcalList">List product revenue</a></li>
+					<li class="nav-item"><a class="nav-link" href="stcalMonthly">Monthly product revenue</a></li>
 				</ul>
 
 			</div></li>

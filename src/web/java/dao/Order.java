@@ -219,7 +219,7 @@ public class Order {
 		}
 		return orderSingles;
 	}
-	
+
 	public List<OrderSingle> getOrderSingleByOrderTotal(String id) {
 		List<OrderSingle> orderSingles = new ArrayList<OrderSingle>();
 		String query = "select * from ordersingle where orderTotal_id = ?";
@@ -237,7 +237,7 @@ public class Order {
 		}
 		return orderSingles;
 	}
-	
+
 	public List<OrderSingle> getSingleProductStatictical() {
 		List<OrderSingle> orderSingles = new ArrayList<OrderSingle>();
 		String query = "select product_id, price*sum(number), sum(number) from laptopweb.ordersingle group by product_id;";
@@ -246,15 +246,14 @@ public class Order {
 			ps = conn.prepareStatement(query);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				orderSingles.add(
-						new OrderSingle(rs.getInt(1), rs.getFloat(2), rs.getInt(3)));
+				orderSingles.add(new OrderSingle(rs.getInt(1), rs.getFloat(2), rs.getInt(3)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return orderSingles;
 	}
-	
+
 	public OrderTotal getOrderTotalById(String id) {
 		OrderTotal orderTotal = null;
 		String query = "select * from ordertotal where id = ?";
@@ -264,17 +263,16 @@ public class Order {
 			ps.setString(1, id);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				orderTotal = new OrderTotal(rs.getString(1), rs.getFloat(2), rs.getString(3), rs.getInt(4), rs.getInt(5),
-								rs.getString(6), rs.getFloat(7), rs.getInt(8), rs.getString(9), rs.getTimestamp(10));
+				orderTotal = new OrderTotal(rs.getString(1), rs.getFloat(2), rs.getString(3), rs.getInt(4),
+						rs.getInt(5), rs.getString(6), rs.getFloat(7), rs.getInt(8), rs.getString(9),
+						rs.getTimestamp(10));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return orderTotal;
 	}
-	
-	
-	
+
 	public int getTotalOrderNumber() {
 		int totalOrder = 0;
 		String query = "select count(id) from laptopweb.ordertotal;";
@@ -290,7 +288,7 @@ public class Order {
 		}
 		return totalOrder;
 	}
-	
+
 	public int getSumOrderNumber() {
 		int totalOrder = 0;
 		String query = "select sum(number) from laptopweb.ordersingle;";
@@ -306,26 +304,55 @@ public class Order {
 		}
 		return totalOrder;
 	}
-	
+
 	public List<OrderTotal> getSingleDayStaticticals() {
 		List<OrderTotal> orderDay = new ArrayList<OrderTotal>();
-		
-		String query = "select sum(total), date(time_order) , count(total)from laptopweb.ordertotal group by date(time_order);";
+
+		String query = "select sum(total), date(time_order) , count(total) from laptopweb.ordertotal group by date(time_order);";
 		try {
 			conn = new ConnectDB().getDBConnection();
 			ps = conn.prepareStatement(query);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				orderDay.add(
-						new OrderTotal(rs.getInt(1), rs.getTimestamp(2), rs.getInt(3)));
+				orderDay.add(new OrderTotal(rs.getInt(1), rs.getTimestamp(2), rs.getInt(3)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return orderDay;
 	}
-	
-	
+
+	public List<OrderTotal> getOrderInMonth() {
+		List<OrderTotal> orderDay = new ArrayList<OrderTotal>();
+
+		String query = "select sum(total), date(time_order) , count(total) from laptopweb.ordertotal group by date(time_order);";
+		try {
+			conn = new ConnectDB().getDBConnection();
+			ps = conn.prepareStatement(query);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				orderDay.add(new OrderTotal(rs.getInt(1), rs.getTimestamp(2), rs.getInt(3)));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return orderDay;
+	}
+
+	public float getMonthTotal(int month) {
+		String query = "SELECT sum(total) FROM laptopweb.ordertotal WHERE time_order BETWEEN '2022-"+ month +"-01 00:00:00' AND '2022-"+ month +"-30 23:59:59';";
+		try {
+			conn = new ConnectDB().getDBConnection();
+			ps = conn.prepareStatement(query);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				return rs.getFloat(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 
 	public void changeStatusOrder(String id, int status) {
 		String query = "UPDATE ordertotal SET status = ? WHERE id = ?";
@@ -339,8 +366,6 @@ public class Order {
 			e.printStackTrace();
 		}
 	}
-	
-	
 
 	public static void main(String args[]) {
 		String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789" + "abcdefghijklmnopqrstuvxyz";
