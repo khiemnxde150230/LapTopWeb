@@ -3,14 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <!DOCTYPE html>
 <div class="profile">
-	<h1 class="text-primary">Your profile</h1>
+	<h1 class="text-primary">Hồ sơ của bạn</h1>
 	<form class="margin-auto form-box d-flex" action="profile"
 		method="post">
 		<div class="col-md-8">
 			<div class="text-left line-space">
-				<h5 class="text-left text-danger mt-4">Manager account</h5>
-				<p class="text-left text-success">Manager your account and
-					security information</p>
+				<h5 class="text-left text-danger mt-4">Quản lí tài khoản</h5>
+				<p class="text-left text-success">Quản lí tài khoản và bảo mật</p>
 			</div>
 			<div class="form-group row form-element">
 				<label for="id" class="col-sm-4 col-form-label">Your Id</label>
@@ -21,14 +20,14 @@
 				</div>
 			</div>
 			<div class="form-group row form-element">
-				<label for="username" class="col-sm-4 col-form-label">Username</label>
+				<label for="username" class="col-sm-4 col-form-label">Tên đăng nhập</label>
 				<div class="col-sm-8">
 					<input type="text" name="username" class="form-control"
 						id="username" placeholder="${userLogin.getUsername() }" disabled>
 				</div>
 			</div>
 			<div class="form-group row form-element">
-				<label for="username" class="col-sm-4 col-form-label">Password</label>
+				<label for="username" class="col-sm-4 col-form-label">Mật khẩu</label>
 				<div class="col-sm-8">
 					<input type="password" name="password" class="form-control"
 						id="password" value="password">
@@ -42,15 +41,15 @@
 				</div>
 			</div>
 			<div class="form-group row form-element">
-				<label for="fullname" class="col-sm-4 col-form-label">Fullname</label>
+				<label for="fullname" class="col-sm-4 col-form-label">Tên đầy đủ</label>
 				<div class="col-sm-8">
 					<input type="text" name="fullname" class="form-control"
 						id="fullname" value="${userLogin.getFullname() }">
 				</div>
 			</div>
 			<div class="form-group row form-element">
-				<label for="fullname" class="col-sm-4 col-form-label">Phone
-					number</label>
+				<label for="fullname" class="col-sm-4 col-form-label">Số điện thoại
+					</label>
 				<div class="col-sm-8">
 					<input type="text" name="phone" class="form-control" id="fullname"
 						value="${ userLogin.getPhone()}">
@@ -58,7 +57,7 @@
 			</div>
 			<div class="form-group row form-element">
 				<label for="avatar" class="col-sm-4 col-form-label">Avatar
-					link</label>
+					</label>
 				<div class="col-sm-8">
 					<input type="text" name="avatar" class="form-control" id="avatar"
 						value="${ userLogin.getAvatar()}">
@@ -68,7 +67,7 @@
 				<p class="text-danger">${mess }</p>
 			</php:if>
 			<input type="submit" class="btn btn-danger mb-4 col-md-9"
-				value="Save">
+				value="Lưu">
 		</div>
 
 		<div class="col-md-4" style="margin-top: 100px">

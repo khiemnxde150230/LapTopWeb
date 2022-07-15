@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -56,8 +58,8 @@
 			<%@include file="../component/leftbar.jsp"%>
 			<div class="main-panel">
 				<div class="content-wrapper">
-					<a href="user" class="btn btn-primary">Return to user page</a>
-					<h1 class="text-center" style="padding-top: -50px">Edit User</h1>
+					<a href="user" class="btn btn-primary">Trở lại trang người dùng</a>
+					<h1 class="text-center" style="padding-top: -50px">Sửa người dùng</h1>
 					<form action="editUser" method="post"
 						style="width: 50%; margin: auto">
 						<div class="form-group">
@@ -65,8 +67,7 @@
 								value=${userEdit.getId() }>
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1" style="font-size: 18px">Enter
-								Avatar Link</label> <input name="avatar" type="text"
+							<label for="exampleInputEmail1" style="font-size: 18px">Nhập link ảnh</label> <input name="avatar" type="text"
 								class="form-control" value=${userEdit.getAvatar() }>
 						</div>
 						<div class="form-group">
@@ -75,22 +76,19 @@
 								value=${userEdit.getEmail() }>
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1" style="font-size: 18px">User
-								Name</label> <input disabled type="text" class="form-control"
+							<label for="exampleInputEmail1" style="font-size: 18px">Tên người dùng</label> <input disabled type="text" class="form-control"
 								value=${userEdit.getUsername() }>
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1" style="font-size: 18px">Enter
-								Password</label> <input name="password" type="text" class="form-control"
+							<label for="exampleInputEmail1" style="font-size: 18px">Nhập mật khẩu</label> <input name="password" type="text" class="form-control"
 								value=${userEdit.getPassword() }>
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1" style="font-size: 18px">Enter
-								FullName</label> <input name="fullname" type="text" class="form-control"
+							<label for="exampleInputEmail1" style="font-size: 18px">Nhập tên đầy đủ</label> <input name="fullname" type="text" class="form-control"
 								value=${userEdit.getFullname() } />
 						</div>
 						<div class="form-group">
-							<label for="admin" style="font-size: 18px">Is Admin</label>
+							<label for="admin" style="font-size: 18px">Phải là admin</label>
 							<php:if test="${userEdit.getRole() == 1 }">
 								<label>Yes</label>
 								<input type="radio" class="form-check-input" id="admin1"
@@ -103,7 +101,7 @@
 								<label>Yes</label>
 								<input type="radio" class="form-check-input" id="admin1"
 									name="isAdmin" value="1">
-								<label>Yes</label>
+								<label>No</label>
 								<input type="radio" class="form-check-input" id="admin2"
 									name="isAdmin" value="0" checked>
 							</php:if>
@@ -111,7 +109,7 @@
 						</div>
 						<div class="justify-content-center">
 							<button type="submit" class="btn btn-primary margin-center"
-								style="width: 100%">Submit</button>
+								style="width: 100%">Sửa</button>
 						</div>
 					</form>
 

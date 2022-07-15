@@ -2,7 +2,9 @@
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -57,17 +59,17 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; margin: 10px; width: 100%">
-					<h1 class="text-center">List Comment From User</h1>
+					<h1 class="text-center">Danh sách bình luận từ người dùng</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>
-							<th>Username</th>
-							<th>Fullname</th>
-							<th>Product</th>
-							<th>Comment</th>
-							<th>Rating</th>
-							<th>Image</th>
-							<th>Date</th>
+							<th>Tên đăng nhập</th>
+							<th>Tên đầy đủ</th>
+							<th>Sản phẩm</th>
+							<th>Bình luận</th>
+							<th>Đánh giá</th>
+							<th>Ảnh</th>
+							<th>Ngày đánh giá</th>
 						</tr>
 						<php:forEach items="${comments }" var="comment">
 							<tr style="font-size: 24px; font-weight: 700">

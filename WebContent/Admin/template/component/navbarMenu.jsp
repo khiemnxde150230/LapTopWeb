@@ -1,22 +1,23 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="navbar-menu-wrapper d-flex align-items-top">
 	<ul class="navbar-nav">
 		<li class="nav-item font-weight-semibold d-none d-lg-block ms-0" >
 			<h1 class="welcome-text text-danger">
-				Welcome back, <span class="text-light fw-bold">${userLogin.getFullname() }</span>
+				Chào mừng trở lại, <span class="text-light fw-bold">${userLogin.getFullname() }</span>
 			</h1>
-			<h3 class="welcome-sub-text text-danger font-weight-bolder">ADMIN PAGE</h3>
+			<h3 class="welcome-sub-text text-danger font-weight-bolder">Trang quản lí</h3>
 		</li>
 	</ul>
 	<ul class="navbar-nav ms-auto">
 		<li class="nav-item dropdown d-none d-lg-block"><a
 			class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split"
 			id="messageDropdown" href="#" data-bs-toggle="dropdown"
-			aria-expanded="false"> Select Category </a>
+			aria-expanded="false"> Chọn danh mục </a>
 			<div
 				class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
 				aria-labelledby="messageDropdown">
 				<a class="dropdown-item py-3">
-					<p class="mb-0 font-weight-medium float-left">Select category</p>
+					<p class="mb-0 font-weight-medium float-left">Chọn danh mục</p>
 				</a>
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item preview-item">
@@ -165,16 +166,15 @@
 				</div>
 				<a class="dropdown-item"><i
 					class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i>
-					My Profile <span class="badge badge-pill badge-danger">1</span></a> <a
+					Hồ sơ của tôi <span class="badge badge-pill badge-danger">1</span></a> <a
 					class="dropdown-item"><i
 					class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i>
-					Messages</a> <a class="dropdown-item"><i
+					Tin nhắn</a> <a class="dropdown-item"><i
 					class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i>
-					Activity</a> <a class="dropdown-item"><i
+					Hoạt động</a> <a class="dropdown-item"><i
 					class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i>
 					FAQ</a> <a class="dropdown-item" href="../signout"><i
-					class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign
-					Out</a>
+					class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Đăng xuất</a>
 			</div></li>
 	</ul>
 	<button

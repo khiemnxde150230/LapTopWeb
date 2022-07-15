@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"

@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <!DOCTYPE html>
 <html lang="en">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,13 +59,13 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; margin: 10px; width: 100%">
-					<h1 class="text-center">Revenue Statistical</h1>
+					<h1 class="text-center">Thống kê doanh thu</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>
-							<th>Day</th>
-							<th>Number of order</th>
-							<th>Total (NVD)</th>
+							<th>Ngày</th>
+							<th>Số lượt đặt hàng</th>
+							<th>Tổng (NVD)</th>
 						</tr>
 						<php:forEach items="${revenueEachs }" var="revenueEach" varStatus="i">
 							<tr style="font-weight: 700; font-family: Verdana, sans-serif;">
@@ -76,7 +76,7 @@
 						</php:forEach>
 						
 						<tr style="font-weight: 700; font-size: 22px; font-family: Verdana, sans-serif;">
-							<td>Total</td>
+							<td>Tổng</td>
 							<td>${totalOrder }</td>
 							<td>${revenueAll }</td>
 						</tr>

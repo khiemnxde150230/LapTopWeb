@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <!DOCTYPE html>
 <html lang="en">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,15 +59,15 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; margin: 10px; width: 100%">
-					<h1 class="text-center">Single Product Statistical</h1>
+					<h1 class="text-center">Thống kê đơn</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>
-							<th>Product ID</th>
-							<th>Name</th>
-							<th>Unit Price</th>
-							<th>Total Sold</th>
-							<th>Total</th>
+							<th>ID sản phẩm</th>
+							<th>Tên</th>
+							<th>Đơn giá</th>
+							<th>Tổng lượt bán</th>
+							<th>Tổng</th>
 						</tr>
 						<php:forEach items="${productUnitStatictical }" var="productUnit" varStatus="i">
 							<tr style="font-weight: 700; font-family: Verdana, sans-serif;">
@@ -80,7 +80,7 @@
 						</php:forEach>
 						
 						<tr style="font-weight: 700; font-size: 22px; font-family: Verdana, sans-serif;">
-							<td>Total</td>
+							<td>Tổng</td>
 							<td></td>
 							<td></td>
 							<td>${totalOrders }</td>

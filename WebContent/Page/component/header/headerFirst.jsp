@@ -52,20 +52,20 @@
 								</div>
 								<php:if test="${userLogin.getRole() == 1 }">
 									<a href="admin/home" class="dropdown-item my-2 "><i
-										class="fas fa-cogs text-danger me-2"></i> Management Page <span
+										class="fas fa-cogs text-danger me-2"></i> Quản lí <span
 										class="badge badge-pill badge-danger">1</span></a>
 								</php:if>
 								<a href="./profile" class="dropdown-item my-2 "><i
-									class="far fa-user text-primary me-2"></i> My Profile <span
+									class="far fa-user text-primary me-2"></i> Hồ sơ của tôi <span
 									class="badge badge-pill badge-danger">1</span></a> <a
 									class="dropdown-item my-2 " href="history"><i
-									class="far fa-envelope text-primary me-2"></i> History</a> <a
+									class="far fa-envelope text-primary me-2"></i> Lịch sử</a> <a
 									class="dropdown-item my-2 "><i
-									class="fas fa-calendar-times text-primary me-2"></i> Activity</a> <a
+									class="fas fa-calendar-times text-primary me-2"></i> Hoạt động</a> <a
 									class="dropdown-item my-2 "><i
 									class="fas fa-question-circle text-primary me-2"></i> FAQ</a> <a
 									class="dropdown-item my-2" href="signout"><i
-									class="fas fa-sign-out-alt text-warning me-2"></i>Sign Out</a>
+									class="fas fa-sign-out-alt text-warning me-2"></i>Đăng xuất</a>
 							</div></div>
 
 					</php:if></li>

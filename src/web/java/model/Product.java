@@ -6,6 +6,7 @@ import web.java.dao.BrandDAO;
 import web.java.dao.CategoryDAO;
 import web.java.dao.ImageDAO;
 import web.java.dao.ProductDAO;
+import web.java.utils.Function;
 
 public class Product {
 	private int id;
@@ -176,8 +177,8 @@ public class Product {
 		return (new ImageDAO().getAllImageById(Integer.toString(this.id)));
 	}
 	
-	public double getTrueRating() {
-		return new ProductDAO().getProductRatingById(getId());
+	public String getTrueRating() {
+		return Function.getFormatRating(new ProductDAO().getProductRatingById(getId())) ;
 	}
 	
 	public int getNumberPersonRating() {

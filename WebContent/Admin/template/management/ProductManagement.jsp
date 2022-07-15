@@ -2,7 +2,9 @@
 
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
  -->
@@ -59,23 +61,23 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; width: auto">
-					<a href="addProduct" class="btn btn-primary">Add more product</a>
-					<h1 class="text-center">List Product</h1>
+					<a href="addProduct" class="btn btn-primary">Thêm sản phẩm</a>
+					<h1 class="text-center">Danh sách sản phẩm</h1>
 					<table
 						class="table table-striped table-bordered table-hover text-center"
 						style="font-family:"TimesNewRoman", Times, serif; font-weight:300">
 						<tr class="table-primary">
-							<th>Image</th>
-							<th>Title</th>
-							<th>Rating</th>
-							<th>Sold</th>
-							<th>Price</th>
-							<th>Category</th>
-							<th>Brand</th>
-							<th>Discount</th>
-							<th>Add image</th>
-							<th>Edit</th>
-							<th>Delete</th>
+							<th>Ảnh</th>
+							<th>Tiêu đề</th>
+							<th>Đánh giá</th>
+							<th>Bán</th>
+							<th>Giá</th>
+							<th>Danh mục</th>
+							<th>Thương hiệu</th>
+							<th>Giảm giá</th>
+							<th>Thêm ảnh</th>
+							<th>Sửa</th>
+							<th>Xóa</th>
 						</tr>
 						<php:forEach items="${products}" var="product">
 							<tr>
@@ -107,9 +109,9 @@
 								<th><a href="addImageProduct?id=${product.getId() }"
 									class="btn btn-success">Add Image</a></th>
 								<th><a href="editProduct?id=${product.getId() }"
-									class="btn btn-danger">Edit</a></th>
+									class="btn btn-danger">Sửa</a></th>
 								<th><a href="deleteProduct?id=${product.getId() }"
-									class="btn btn-danger">Delete</a></th>
+									class="btn btn-danger">Xóa</a></th>
 
 							</tr>
 

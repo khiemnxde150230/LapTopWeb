@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -58,17 +60,17 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; margin: 10px; width: 100%">
-					<h1 class="text-center">Order Management</h1>
+					<h1 class="text-center">Quản lí đơn</h1>
 					<table
 						class="table table-hover table-bordered table-striped text-center">
 						<tr>
-							<th>ID Order</th>
-							<th>Username</th>
-							<th>Phone</th>
-							<th>Fullname</th>
-							<th>Total</th>
-							<th>Status</th>
-							<th>Action</th>
+							<th>ID đơn</th>
+							<th>Tên đăng nhập</th>
+							<th>Số điện thoại</th>
+							<th>Tên đầy đủ</th>
+							<th>Tổng</th>
+							<th>Trạng thái</th>
+							<th>Hành động</th>
 						</tr>
 						<php:forEach items="${orderTotals}" var="orderTotal">
 							<tr>
@@ -89,7 +91,7 @@
 								</php:if>
 								<php:if test="${orderTotal.getStatus() == 2 }">
 									<td>Đang chờ người nhận xác nhận</td>
-									<td><a href="" class="btn btn-secondary">Waiting...</a></td>
+									<td><a href="" class="btn btn-secondary">Chờ...</a></td>
 								</php:if>
 								<php:if test="${orderTotal.getStatus() == -1 }">
 									<td>Đã giao</td>

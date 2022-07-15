@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -56,16 +58,16 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; margin: 10px; width: 100%">
-					<h1 class="text-center">Top 20 user contribute</h1>
+					<h1 class="text-center">Lượng mua của top 20 khách hàng</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>
 							<th>Top</th>
-							<th>Image</th>
-							<th>Username</th>
-							<th>Fullname</th>
+							<th>Ảnh</th>
+							<th>Tên người dùng</th>
+							<th>Tên đầy đủ</th>
 							<th>Email</th>
-							<th>Total buy <svg xmlns="http://www.w3.org/2000/svg"
+							<th>Tổng mua <svg xmlns="http://www.w3.org/2000/svg"
 									width="16" height="16" fill="currentColor"
 									class="bi bi-chevron-double-down" viewBox="0 0 16 16">
   <path fill-rule="evenodd"

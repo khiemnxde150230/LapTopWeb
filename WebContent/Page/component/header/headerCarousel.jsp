@@ -56,13 +56,13 @@
 						type="button" style="height: 100px; margin-top: 100px; z-index: 1"
 						data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon text-danger "></span> <span
-							class="visually-hidden text-danger">Previous</span>
+							class="visually-hidden text-danger">Trước</span>
 					</button>
 					<button class="carousel-control-next " type="button"
 						data-bs-target="#carouselExampleCaptions" data-bs-slide="next"
 						style="height: 100px; margin-top: 100px; z-index: 1">
 						<span class="carousel-control-next-icon text-danger"></span> <span
-							class="visually-hidden text-danger">Next</span>
+							class="visually-hidden text-danger">Sau</span>
 					</button>
 				</div>
 			</div>

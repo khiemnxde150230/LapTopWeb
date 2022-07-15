@@ -1,4 +1,4 @@
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="col-sm-12 border-radius">
 	<div class="home-tab">
 		<div

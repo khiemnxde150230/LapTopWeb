@@ -1,10 +1,10 @@
 <%@page import="web.java.model.Product"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
 <!DOCTYPE html>
 <html lang="en">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,27 +60,27 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; margin: 10px; width: 100%">
-					<h1 class="text-center">Revenue Statistical</h1>
+					<h1 class="text-center">Thống kê doanh thu</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>
-							<th>Month</th>
-							<th>Total (NVD)</th>
+							<th>Tháng</th>
+							<th>Tổng (NVD)</th>
 						</tr>
 
 						<tr style="font-weight: 700; font-family: Verdana, sans-serif;">
-							<td>Month: 6</td>
+							<td>Tháng: 6</td>
 							<td>${ Product.getPriceStaticFormat(month6) }</td>
 						</tr>
 						
 						<tr style="font-weight: 700; font-family: Verdana, sans-serif;">
-							<td>Month: 7</td>
+							<td>Tháng: 7</td>
 							<td>${Product.getPriceStaticFormat(month7) }</td>
 						</tr>
 
 						<tr
 							style="font-weight: 700; font-size: 22px; font-family: Verdana, sans-serif;">
-							<td>Total</td>
+							<td>Tổng</td>
 							<td>${revenueAll }</td>
 						</tr>
 

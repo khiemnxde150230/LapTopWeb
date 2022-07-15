@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -56,11 +58,11 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; width: 100%">
-					<h1 class="text-center">List Category</h1>
+					<h1 class="text-center">Danh sách danh mục</h1>
 					<table class="table table-striped table-bordered text-center">
 						<tr>
-							<th>Collection Name</th>
-							<th>List Category</th>
+							<th>Tên bộ sưu tập</th>
+							<th>Danh sách danh mục</th>
 						</tr>
 						<php:forEach items="${collections }" var="collection">
 							<tr>

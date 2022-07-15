@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -56,14 +58,14 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; width: 100%">
-					<h1 class="text-center">List Event</h1>
+					<h1 class="text-center">Danh sách sản phẩm</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>
-							<th>Name Event</th>
+							<th>Tên sự kiện</th>
 							<th>Icon</th>
-							<th>Product</th>
-							<th>Change</th>
+							<th>Sản phẩm</th>
+							<th>Thay đổi</th>
 						</tr>
 						<php:forEach items="${events }" var="event">
 							<tr>
@@ -83,7 +85,7 @@
 									</ul>
 								</td>
 								<td><a class="btn btn-danger"
-									href="eventEdit?id=${event.getId() }">Edit</a></td>
+									href="eventEdit?id=${event.getId() }">Sửa</a></td>
 							</tr>
 						</php:forEach>
 					</table>

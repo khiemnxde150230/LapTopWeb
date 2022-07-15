@@ -1,17 +1,18 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="theme-setting-wrapper">
 	<div id="settings-trigger">
 		<i class="ti-settings"></i>
 	</div>
 	<div id="theme-settings" class="settings-panel">
 		<i class="settings-close ti-close"></i>
-		<p class="settings-heading">SIDEBAR SKINS</p>
+		<p class="settings-heading">Màu của side bar</p>
 		<div class="sidebar-bg-options selected" id="sidebar-light-theme">
 			<div class="img-ss rounded-circle bg-light border me-3"></div>
-			Light
+			Sáng  
 		</div>
 		<div class="sidebar-bg-options" id="sidebar-dark-theme">
 			<div class="img-ss rounded-circle bg-dark border me-3"></div>
-			Dark
+			Tối
 		</div>
 		<p class="settings-heading mt-2">HEADER SKINS</p>
 		<div class="color-tiles mx-0 px-4">

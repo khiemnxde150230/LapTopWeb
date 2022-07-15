@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -62,13 +64,13 @@
 						style="font-family:" TimesNewRoman", Times, serif; font-weight:300">
 						<tr class="table-primary">
 							<th></th>
-							<th>Id</th>
-							<th>Username</th>
+							<th>ID</th>
+							<th>Tên đăng nhập</th>
 							<th>Email</th>
-							<th>Fullname</th>
-							<th>Is Admin</th>
-							<th>Edit</th>
-							<th>Delete</th>
+							<th>Tên đầy đủ</th>
+							<th>Có phải admin</th>
+							<th>Sửa</th>
+							<th>Xóa</th>
 						</tr>
 						<php:forEach items="${users}" var="user">
 							<tr>
@@ -82,9 +84,9 @@
 									<php:if test="${user.getRole() == 1 }">checked</php:if>>
 								</th>
 								<th><a href="editUser?id=${user.getId() }"
-									class="btn btn-warning">Edit</a></th>
+									class="btn btn-warning">Sửa</a></th>
 								<th><a href="deleteUser?id=${user.getId() }"
-									class="btn btn-danger">Delete</a></th>
+									class="btn btn-danger">Xóa</a></th>
 							</tr>
 
 						</php:forEach>

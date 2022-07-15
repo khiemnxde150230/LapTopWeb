@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Admin Page</title>
+<title>Trang quản lí</title>
 <!-- plugins:css -->
 <link rel="stylesheet" href="Admin/template/vendors/feather/feather.css"
 	type="text/css" media="screen">

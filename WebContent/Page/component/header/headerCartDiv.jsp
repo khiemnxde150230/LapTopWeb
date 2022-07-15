@@ -29,7 +29,7 @@
 			<img
 				src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/cart/9bdd8040b334d31946f49e36beaf32db.png"
 				alt="#">
-			<p>Nothing here</p>
+			<p>Không có gì trong giỏ hàng</p>
 		</div>
 	</php:if>
 </div>

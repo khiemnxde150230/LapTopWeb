@@ -13,7 +13,7 @@
 	</div>
 
 	<php:if test="${historyTransactions.isEmpty() == true }">
-		<h3 class="text-danger text-center mt-4">Empty</h3>
+		<h3 class="text-danger text-center mt-4">Trống</h3>
 	</php:if>
 
 	<div class="cart_main_wrapper">

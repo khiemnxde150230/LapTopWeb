@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -56,16 +58,16 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; width: 100%">
-					<h1 class="text-center">List Coupon</h1>
+					<h1 class="text-center">Danh sách mã giảm giá</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>
-							<th>Id coupon</th>
-							<th>Code</th>
-							<th>Event</th>
-							<th>Discount Amount</th>
-							<th>Remain</th>
-							<th>Delete Coupon</th>
+							<th>ID</th>
+							<th>Mã</th>
+							<th>Sự kiện</th>
+							<th>Số lượng giảm</th>
+							<th>Còn lại</th>
+							<th>Xóa mã</th>
 						</tr>
 						<php:forEach items="${coupons }" var="coupon">
 							<tr>
@@ -79,7 +81,7 @@
 								<td>${coupon.getDiscount() }</td>
 								<td>${coupon.getRemain() }</td>
 								<th><a class="btn btn-danger"
-									href="couponDelete?id=${coupon.getId()}">Delete</a></th>
+									href="couponDelete?id=${coupon.getId()}">Xóa</a></th>
 							</tr>
 
 						</php:forEach>
@@ -91,16 +93,16 @@
 						class="d-flex align-items-center text-center">
 						<div class="d-flex col-md-3">
 							<p class="col-md-6 m-0"
-								style="line-height: 32px; font-size: 16px">Input coupon</p>
+								style="line-height: 32px; font-size: 16px">Nhập mã giảm giá</p>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="coupon"
-									placeholder="Enter coupon">
+									placeholder="Nhập mã giảm giá">
 							</div>
 
 						</div>
 						<div class="d-flex col-md-2">
 							<p class="col-md-6 m-0"
-								style="line-height: 32px; font-size: 16px">Select event</p>
+								style="line-height: 32px; font-size: 16px">Chọn sự kiện</p>
 							<div class="col-md-6">
 
 								<select name="event" class="col-md-9 mx-1 form-control p-0">
@@ -114,22 +116,22 @@
 						</div>
 						<div class="d-flex col-md-3">
 							<p class="col-md-6 m-0"
-								style="line-height: 32px; font-size: 16px">Input discount</p>
+								style="line-height: 32px; font-size: 16px">Nhập giá trị</p>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="discount"
-									placeholder="Enter Discount">
+									placeholder="Nhập giá trị">
 							</div>
 						</div>
 						<div class="d-flex col-md-3">
 							<p class="col-md-6 m-0"
-								style="line-height: 32px; font-size: 16px">Input number</p>
+								style="line-height: 32px; font-size: 16px">Số lượng</p>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="number"
-									placeholder="Enter Number">
+									placeholder="Nhập số lượng">
 							</div>
 						</div>
 						<div class="d-flex col-md-2 text-center ms-4	">
-							<input type="submit" value="ADD" class="btn btn-success col-md-4">
+							<input type="submit" value="Thêm" class="btn btn-success col-md-4">
 						</div>
 					</form>
 				</div>

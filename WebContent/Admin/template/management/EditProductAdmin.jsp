@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -57,10 +59,8 @@
 			<div class="main-panel">
 
 				<div class="content-wrapper">
-					<a href="product" class="btn btn-primary">Return to list
-						product</a>
-					<h1 class="text-center" style="padding-top: -50px">Edit
-						product</h1>
+					<a href="product" class="btn btn-primary">Trở lại danh sách sản phẩm</a>
+					<h1 class="text-center" style="padding-top: -50px">Sửa sản phẩm</h1>
 					<form action="editProduct" method="post"
 						style="width: 50%; margin: auto">
 						<div class="form-group">
@@ -68,32 +68,32 @@
 								value="${product.getId() }">
 						</div>
 						<div class="form-group">
-							<label for="" style="font-size: 18px">Enter title</label> <input
+							<label for="" style="font-size: 18px">Nhập tiêu đề</label> <input
 								name="title" type="text" class="form-control"
 								value="${product.getTitle() }">
 						</div>
 						<div class="form-group">
-							<label for="" style="font-size: 18px">Enter description</label>
+							<label for="" style="font-size: 18px">Nhập miêu tả</label>
 							<textarea rows="9" cols="70" name="description"
 								class="form-control" style="height: 70px">${product.getDescription() }</textarea>
 						</div>
 						<div class="form-group">
-							<label for="" style="font-size: 18px">Enter rating</label> <input
+							<label for="" style="font-size: 18px">Đánh giá</label> <input
 								type="text" class="form-control" value="${product.getRating() }"
 								disabled>
 						</div>
 						<div class="form-group">
-							<label for="" style="font-size: 18px">Sold</label> <input
+							<label for="" style="font-size: 18px">Đã bán</label> <input
 								disabled type="text" class="form-control"
 								value="${product.getSold() }">
 						</div>
 						<div class="form-group">
-							<label for="" style="font-size: 18px">Enter Price Value</label> <input
+							<label for="" style="font-size: 18px">Nhập giá tiền</label> <input
 								name="price" type="text" class="form-control"
 								value=${product.getFormatPriceDefault() }>
 						</div>
 						<div class="form-group">
-							<label for="" style="font-size: 18px">Select category</label> <select
+							<label for="" style="font-size: 18px">Chọn danh mục</label> <select
 								name="category" id="select_projects" class="form-control"
 								style="padding: 3px; background-color: white; color: red">
 								<php:forEach items="${collections }" var="collection">
@@ -111,7 +111,7 @@
 							</select>
 						</div>
 						<div class="mb-4">
-							<label for="" style="font-size: 18px">Select Brand</label> <select
+							<label for="" style="font-size: 18px">Chọn nhãn hàng</label> <select
 								class="form-control"
 								style="background-color: white; color: red; padding: 4px" id=""
 								name="brand">
@@ -123,8 +123,8 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label for="" style="font-size: 18px">Enter Discount
-								Amount</label> <input name="discount" type="text" class="form-control"
+							<label for="" style="font-size: 18px">Nhập số lượng
+								</label> <input name="discount" type="text" class="form-control"
 								value=${product.getDiscount() }>
 						</div>
 						<php:if test="${mess.length() > 0 }">
@@ -133,7 +133,7 @@
 						</php:if>
 						<div class="justify-content-center">
 							<button type="submit" class="btn btn-primary margin-center"
-								style="width: 100%">Submit</button>
+								style="width: 100%">Sửa</button>
 						</div>
 					</form>
 
