@@ -126,7 +126,7 @@ public class EventDAO {
     }
     
     public List<Product> getProductInEvent(String start){
-	String query = "select * from product where id in (select product_id from event_product where event_id = 8) limit ?,6 ";
+	String query = "select * from product where id in (select product_id from event_product where event_id = 2) limit ?,6 ";
 	List<Product> products = new ArrayList<Product>();
 	try {
 	    conn = new ConnectDB().getDBConnection();

@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				<div class="product-sale__direct">
-					<a href="event?id=8" target="__blank" class="text-danger">XEM
+					<a href="event?id=1" target="__blank" class="text-danger">XEM
 						TẤT CẢ DEAL =></a>
 				</div>
 			</div>
@@ -38,8 +38,8 @@
 										style="width: 100%; height: 180px" />
 								</div>
 								<p class="product-sale__item-name">${flashdeal1.getTitle() }</p>
-								<div class="product-sale__item-price">
-									<span class="product-sale__item-price-curr">1k</span> <span
+								<div class="product-sale__item-price flex-column align-items-center">
+									<span class="product-sale__item-price-curr">${flashdeal1.getFormatPriceStandard() }</span> <span
 										class="product-sale__item-price-old">${flashdeal1.getFormatPriceDefault() }</span>
 								</div>
 								<div class="home-product-item__sale-off">

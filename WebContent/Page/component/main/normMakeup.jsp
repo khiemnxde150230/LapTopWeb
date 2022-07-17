@@ -52,10 +52,14 @@
 									class="product-norm__link--brand">${makeup.getBrandName() }</a>
 							</p>
 							<div class="product-norm__price">
+								
 								<span class="product-norm__price--curr">
 									${makeup.getFormatPriceStandard() } đ</span>
+								
 								<div class="product-norm__quantity">
-									<p>${makeup.getFormatPriceDefault() }₫</p>
+									<php:if test="${makeup.getDiscount() != 0 }">
+										<p>${makeup.getFormatPriceDefault() }₫</p>
+									</php:if>
 									<span class="product-norm__quantity--selled">Đã bán
 										${makeup.getSold() }</span>
 								</div>

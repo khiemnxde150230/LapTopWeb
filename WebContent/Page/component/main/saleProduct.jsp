@@ -40,9 +40,9 @@
 							<img alt="" src="${product.getFirstImage() }" style="width: 100%" />
 						</div>
 						<p class="product-sale__item-name">${product.getTitle() }</p>
-						<div class="product-sale__item-price">
-							<span class="product-sale__item-price-curr">${product.getFormatPriceStandard() }đ</span>
-							<span class="product-sale__item-price-old">${product.getFormatPriceDefault() }đ</span>
+						<div class="product-sale__item-price flex-column align-items-center">
+							<div class="product-sale__item-price-curr">${product.getFormatPriceStandard() }</div>
+							<div class="product-sale__item-price-old">${product.getFormatPriceDefault() }</div>
 						</div>
 					</a>
 				</div>

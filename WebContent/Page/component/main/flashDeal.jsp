@@ -30,7 +30,7 @@
 				<div class="carousel"
 					data-flickity='{ "freeScroll": true, "wrapAround": true, "pageDots": false, "autoPlay": true }'>
 					<php:forEach items="${flashdeal1s }" var="flashdeal1">
-						<div class="col-lg-2 carousel-cell">
+						<div class="col-lg-2 carousel-cell" style="height: 300px">
 							<a href="product_detail?id=${flashdeal1.getId() }"
 								class="product-sale__item">
 								<div class="product-sale__item-img" style="padding-top: 4px">
@@ -38,7 +38,7 @@
 										style="width: 100%; height: 180px">
 								</div>
 								<p class="product-sale__item-name">${flashdeal1.getTitle() }</p>
-								<div class="product-sale__item-price">
+								<div class="product-sale__item-price flex-column align-items-center">
 									<span class="product-sale__item-price-curr">${flashdeal1.getFormatPriceStandard() }đ</span>
 									<span class="product-sale__item-price-old">${flashdeal1.getFormatPriceDefault() }</span>
 								</div>
