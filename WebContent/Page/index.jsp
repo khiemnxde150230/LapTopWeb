@@ -25,7 +25,8 @@
 	media="screen">
 <link rel="stylesheet" href="Page/css/cartMainCss.css" type="text/css"
 	media="screen">
-
+<link rel="stylesheet" href="Page/css/reponsive.css" type="text/css"
+	media="screen">
 <link
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
 	rel="stylesheet">
@@ -54,9 +55,9 @@
 			<%@include file="component/main/flashDeal.jsp"%>
 			<%@include file="component/main/allEvent.jsp"%>
 			<%@include file="component/main/deal1k.jsp"%>
-			<div class="d-flex justify-content-around mt-5 mb-5">
-				<php:forEach items="${categories }" var="cate" begin="1" end="10">
-					<a class="btn" style="background-color: #990000; color: white"
+			<div class="d-flex justify-content-around mt-5 mb-5 row">
+				<php:forEach items="${categories }" var="cate" begin="1" end="9">
+					<a class="btn col-md-1" style="background-color: #990000; color: white; margin-left: 4px; margin-right: 4px; margin-top: 10px"
 						href="category?id=${cate.getId() } ">${cate.getName() }</a>
 				</php:forEach>
 			</div>

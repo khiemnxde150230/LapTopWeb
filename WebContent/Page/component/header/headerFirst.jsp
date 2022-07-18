@@ -99,11 +99,11 @@
 					<div class="header-search">
 						<form action="search" method="get">
 							<select class="input-select">
-								<option value="0">All Categories</option>
-								<option value="1">Category 01</option>
-								<option value="1">Category 02</option>
-							</select> <input class="input header_search_input" name="key" placeholder="Search here">
-							<button class="search-btn">Search</button>
+								<option value="0">Tất cả danh mục</option>
+								<option value="1">Tất cả danh mục</option>
+								<option value="1">Tất cả danh mục</option>
+							</select> <input class="input header_search_input" name="key" placeholder="Nhập từ khóa">
+							<button class="search-btn">Tìm kiếm</button>
 						</form>
 					</div>
 				</div>
@@ -114,8 +114,7 @@
 					<div class="header-ctn">
 						<!-- Wishlist -->
 						<div>
-							<a href="#"> <i class="fa fa-heart-o"></i> <span>Your
-									Wishlist</span>
+							<a href="#"> <i class="fa fa-heart-o"></i> <span>Yêu thích</span>
 								<div class="qty">2</div>
 							</a>
 						</div>
@@ -126,7 +125,7 @@
 							style="position: relative">
 							<a class="dropdown-toggle header-cart__added"
 								data-toggle="dropdown" aria-expanded="true"> <i
-								class="fa fa-shopping-cart"></i> <span>Your Cart</span>
+								class="fa fa-shopping-cart"></i> <span>Giỏ hàng</span>
 								<div class="qty">${sessionScope.cart != null ? sessionScope.cart.getCartItems().size() : 0}</div>
 							</a>
 

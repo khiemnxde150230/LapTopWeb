@@ -26,7 +26,7 @@
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="Page/img/img6.jpg" class="d-block w-100" alt="...">
+							<img src="Page/img/img6.jpg" class="d-block w-100" style="height: 341px" alt="...">
 							<div class="carousel-caption d-none d-md-block"></div>
 						</div>
 						<div class="carousel-item">
@@ -34,20 +34,20 @@
 							<div class="carousel-caption d-none d-md-block"></div>
 						</div>
 						<div class="carousel-item">
-							<img src="Page/img/img3.jpg" class="d-block w-100" alt="...">
+							<img src="Page/img/img3.jpg" class="d-block w-100" style="height: 341px" alt="...">
 							<div class="carousel-caption d-none d-md-block"></div>
 						</div>
 
 						<div class="carousel-item">
-							<img src="Page/img/img4.jpg" class="d-block w-100" alt="...">
+							<img src="Page/img/img4.jpg" class="d-block w-100" style="height: 341px" alt="...">
 							<div class="carousel-caption d-none d-md-block"></div>
 						</div>
 						<div class="carousel-item">
-							<img src="Page/img/img5.jpg" class="d-block w-100" alt="...">
+							<img src="Page/img/img5.jpg" class="d-block w-100" style="height: 341px" alt="...">
 							<div class="carousel-caption d-none d-md-block"></div>
 						</div>
 						<div class="carousel-item">
-							<img src="Page/img/img1.jpg" class="d-block w-100" alt="...">
+							<img src="Page/img/img1.jpg" class="d-block w-100" style="height: 341px" alt="...">
 							<div class="carousel-caption d-none d-md-block"></div>
 						</div>
 

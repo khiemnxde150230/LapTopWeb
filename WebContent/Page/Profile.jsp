@@ -22,6 +22,8 @@
 	media="screen">
 <link rel="stylesheet" href="Page/css/cartMainCss.css" type="text/css"
 	media="screen">
+<link rel="stylesheet" href="Page/css/reponsive.css" type="text/css"
+	media="screen">
 <link
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
 	rel="stylesheet">

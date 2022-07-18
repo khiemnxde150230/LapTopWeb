@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="php"%>
-<div class="header-third">
+<div class="header-third display_none_reponsive">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-12 ">
 				<div class="heaeder-nav">
 					<ul class="header-nav__menu">
 						<li class="header-nav__parent"><a href="#"

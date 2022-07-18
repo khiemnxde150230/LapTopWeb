@@ -1,8 +1,8 @@
-.dropmenu_config_color a{
+.dropmenu_config_color a {
 	color: #15161D !important;
 }
 
-.dropmenu_config_color{
+.dropmenu_config_color {
 	border: 2px solid #D10024;
 }
 
@@ -10,9 +10,14 @@
 	color: #D10024;
 }
 
+/* 
+.flickity-viewport {
+	height: 360px;
+}
+*/
+
 /*red: #D10024
 //Black: 15161D*/
-
 .header-first {
 	background-color: #eeeeee;
 	display: flex;
@@ -72,7 +77,7 @@
 	display: block;
 }
 
-.element_text{
+.element_text {
 	color: white;
 }
 
@@ -389,11 +394,11 @@
 	margin-bottom: 24px;
 }
 
-.product-wrapper-main{
+.product-wrapper-main {
 	padding: 40px;
 }
 
-.product-wrapper-element{
+.product-wrapper-element {
 	padding: 10px 80px;
 }
 
@@ -431,18 +436,17 @@
 	margin: 0 8px;
 }
 
-#counth, #countm, #counts, #counth2, #countm2, #counts2{
+#counth, #countm, #counts, #counth2, #countm2, #counts2 {
 	font-size: 22px;
 }
 
-.haicham{
+.haicham {
 	font-size: 22px;
 }
 
 .product-sale__direct {
 	display: flex;
 }
-
 
 .product-norm__nav {
 	width: 100%;
@@ -845,7 +849,7 @@
 	z-index: 1;
 }
 
-.view-img{
+.view-img {
 	display: flex;
 }
 
@@ -963,7 +967,8 @@
 	display: flex;
 	margin: 0px 0px;
 }
-.btn-none-border{
+
+.btn-none-border {
 	border-radius: 0px !important;
 }
 
@@ -991,9 +996,10 @@
 	display: flex;
 }
 
-.choose-quantity span{ 
+.choose-quantity span {
 	width: 30%;
 }
+
 .btn-quantity {
 	width: 25px;
 	border: 1px solid #9e9e9e;
@@ -1023,24 +1029,22 @@
 }
 
 /* COMMENT */
-
-.rating-header{
+.rating-header {
 	width: 100%;
 	padding: 30px;
-    margin: auto;
-    display: flex;
+	margin: auto;
+	display: flex;
 }
 
 .comment-content-wrapper {
 	width: 100%;
 }
 
-.comment-content-user img{
+.comment-content-user img {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 }
-
 
 /* CART */
 .cart {
@@ -1451,14 +1455,12 @@ textarea.input {
 /*-- Select input --*/
 .input-select {
 	width: 30%;
-	padding : 0px 15px;
+	padding: 0px 15px;
 	background: #FFF;
 	border: 1px solid #E4E7ED;
 	height: 40px;
 	padding: 0px 15px;
 }
-
-
 
 /*-- checkbox & radio input --*/
 .input-radio, .input-checkbox {
@@ -1558,7 +1560,7 @@ textarea.input {
 }
 
 .input-radio input[type="radio"]:checked ~.caption, .input-checkbox input[type="checkbox"]:checked
-	~.caption {
+	 ~.caption {
 	max-height: 800px;
 }
 
@@ -1707,14 +1709,13 @@ textarea.input {
 	margin-top: 40px;
 }
 
-.header-links li a:hover   {
+.header-links li a:hover {
 	color: #D10024;
 }
 
-.header-links li a:hover > .header-links li a span  {
-	color: #15161D; 
+.header-links li a:hover>.header-links li a span {
+	color: #15161D;
 }
-
 
 .header-links li i {
 	color: #D10024;
@@ -2207,7 +2208,8 @@ textarea.input {
 	font-size: 18px;
 }
 
-.product_wrapper_element .product-body .product-price .product-old-price {
+.product_wrapper_element .product-body .product-price .product-old-price
+	{
 	font-size: 70%;
 	font-weight: 400;
 	color: #8D99AE;
@@ -2283,7 +2285,8 @@ textarea.input {
 	transition: 0.2s all;
 }
 
-.product_wrapper_element .product-body .product-btns>button:hover .tooltipp {
+.product_wrapper_element .product-body .product-btns>button:hover .tooltipp
+	{
 	opacity: 1;
 	visibility: visible;
 	-webkit-transform: translate(-50%, -5px);
@@ -3136,7 +3139,7 @@ textarea.input {
 }
 
 .review-form .input-rating .stars>label:hover:before, .review-form .input-rating .stars>label:hover
-	~label:before {
+	 ~label:before {
 	color: #D10024;
 }
 

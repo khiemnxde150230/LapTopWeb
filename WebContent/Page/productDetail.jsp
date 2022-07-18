@@ -22,6 +22,8 @@
 	media="screen">
 <link rel="stylesheet" href="Page/css/cartMainCss.css" type="text/css"
 	media="screen">
+<link rel="stylesheet" href="Page/css/reponsive.css" type="text/css"
+	media="screen">
 <link rel="stylesheet"
 	href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 <link

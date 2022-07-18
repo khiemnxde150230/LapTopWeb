@@ -24,6 +24,8 @@
 	media="screen">
 <link rel="stylesheet" href="Page/css/cart33.css" type="text/css"
 	media="screen">
+<link rel="stylesheet" href="Page/css/reponsive.css" type="text/css"
+	media="screen">
 <link rel="stylesheet"
 	href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">

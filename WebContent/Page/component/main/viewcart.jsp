@@ -21,7 +21,7 @@
 
 		<div class="cart-menu">
 			<div class="row .cart-plus__item text-center">
-				<div class="col-lg-4">
+				<div class="col-lg-3">
 					<div class="menu-product">Sản phẩm</div>
 				</div>
 				<div class="col-lg-2">
@@ -33,7 +33,7 @@
 				<div class="col-lg-2">
 					<div class="menu-product__quan">Số lượng</div>
 				</div>
-				<div class="col-lg-1">
+				<div class="col-lg-2">
 					<div class="menu-product__allprice">Tổng tiền</div>
 				</div>
 				<div class="col-lg-1">
@@ -45,8 +45,8 @@
 		<php:set var="cartItems" value="${sessionScope.cart.getCartItems()}" />
 		<php:forEach items="${cartItems }" var="cartItem">
 			<div class="cart-plus">
-				<div class="row cart-plus__item">
-					<div class="col-lg-4">
+				<div class="row cart-plus__item text-center">
+					<div class="col-lg-3">
 						<div class="cart-desc">
 							<div class="form-check">
 								<input class="form-check-cart" type="checkbox" checked disabled
@@ -89,10 +89,10 @@
 							</div>
 						</form>
 					</div>
-					<div class="col-lg-1">
+					<div class="col-lg-2">
 						<div class="cart-info__total-price text-center">
-							<input class="col-lg-12 cart_main_element_title_total"
-								style="border: none"
+							<input class="col-lg-12 cart_main_element_title_total text-center"
+								style="border: none" disabled
 								id="totalPrice${cartItem.getProduct().getId() }"
 								value="${cartItem.getTotalSingleFormat() }">
 						</div>
@@ -120,7 +120,7 @@
 					class="total_price_hidden" value="${sessionScope.cart.getTotal()}" />
 				<input type="hidden" id="total_price_hidden" name="total_price"
 					class="total_price_hidden" value="${sessionScope.cart.getTotal()}" />
-				<input type="text" class="col-md-2 btn btn-danger mr-4"
+				<input type="text" disabled style="background-color: #400208" class="col-md-2 btn btn-danger mr-4"
 					value="${sessionScope.cart.getFormatTotal()}" id="total_price">
 				<input type="submit" class="col-md-2 btn btn-success"
 					value="Đặt hàng">
