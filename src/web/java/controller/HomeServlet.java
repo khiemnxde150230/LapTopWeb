@@ -40,6 +40,7 @@ public class HomeServlet extends HttpServlet {
 		String start = request.getParameter("start") == null ? "0" : request.getParameter("start");
 
 		request.setAttribute("saleMakeups", new CategoryDAO().getMakeupCate());
+		System.out.println(start);
 		request.setAttribute("saleProducts", new EventDAO().getProductInEvent(start));
 //		System.out.println("List product" + new EventDAO().getProductInEvent(start));
 		request.setAttribute("events", new EventDAO().getAllEvent());

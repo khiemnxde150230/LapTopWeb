@@ -35,8 +35,7 @@
 				<div class="col-lg-2 mt-5 product_count_start">
 					<a href="product_detail?id=${product.getId() }"
 						class="product-sale__item">
-						<div class="product-sale__item-img"
-							style="padding-top: 4px; height: 220px">
+						<div class="product-sale__item-img" style="padding-top: 4px; height: 220px; display: flex; align-items: center">
 							<img alt="" src="${product.getFirstImage() }" style="width: 100%" />
 						</div>
 						<p class="product-sale__item-name">${product.getTitle() }</p>

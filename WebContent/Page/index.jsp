@@ -115,6 +115,7 @@
 								},
 								success : function(response) {
 									console.log("1");
+									console.log(response);
 									var seemore_space = document
 											.getElementById("seemore_space");
 									seemore_space.innerHTML += response;
