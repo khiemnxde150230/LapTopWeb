@@ -15,7 +15,6 @@ public class Cart {
 	public void addToCart(int id, CartItem cartItem, int qtt) {
 		int count = 0;
 		for (CartItem cartItemThis : this.cartItems) {
-//			System.out.println("product element" + cartItemThis.getProduct());
 			if (cartItemThis.getProduct().getId() == id) {
 				if(cartItemThis.getNumber() + qtt > cartItemThis.getProduct().getQtt()) {
 					cartItemThis.setNumber(cartItemThis.getProduct().getQtt());

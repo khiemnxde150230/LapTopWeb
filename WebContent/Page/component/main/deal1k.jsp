@@ -29,7 +29,7 @@
 					data-flickity='{ "freeScroll": true, "wrapAround": true, "pageDots": false, "autoPlay": true }'>
 					
 					<!-- Event number 5 -->
-					<php:forEach items="${flashdeal2s }" var="flashdeal1">
+					<php:forEach items="${flashdeal1s }" var="flashdeal1">
 						<div class="col-lg-2 carousel-cell">
 							<a href="product_detail?id=${flashdeal1.getId() }"
 								class="product-sale__item">

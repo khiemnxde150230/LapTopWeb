@@ -47,7 +47,6 @@ public class ProductServlet extends HttpServlet {
 		request.setAttribute("collections", new CollectionDAO().getAllCollection());
 		request.setAttribute("productDetail", new ProductDAO().getProductById(id));
 		request.setAttribute("comments", new CommentDAO().getAllCommentProduct(id));
-		System.out.println(new ProductDAO().getProductById(id));
 		request.setAttribute("listImages", new ProductDAO().getProductById(id).getListImg());
 
 		request.getRequestDispatcher("/Page/productDetail.jsp").forward(request, response);

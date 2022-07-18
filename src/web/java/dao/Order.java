@@ -134,7 +134,7 @@ public class Order {
 			ps.setInt(1, quantity);
 			ps.setInt(2, idProduct);
 			ps.executeUpdate();
-			System.out.println(ps);
+//			System.out.println(ps);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -148,7 +148,7 @@ public class Order {
 			ps.setInt(1, quantity);
 			ps.setInt(2, idProduct);
 			ps.executeUpdate();
-			System.out.println(ps);
+//			System.out.println(ps);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

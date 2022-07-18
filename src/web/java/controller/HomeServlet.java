@@ -41,11 +41,12 @@ public class HomeServlet extends HttpServlet {
 
 		request.setAttribute("saleMakeups", new CategoryDAO().getMakeupCate());
 		request.setAttribute("saleProducts", new EventDAO().getProductInEvent(start));
+//		System.out.println("List product" + new EventDAO().getProductInEvent(start));
 		request.setAttribute("events", new EventDAO().getAllEvent());
 		request.setAttribute("brands", new BrandDAO().getAllBrand());
 		request.setAttribute("categories", new CategoryDAO().getAllCategory());
 		request.setAttribute("collections", new CollectionDAO().getAllCollection());
-		request.setAttribute("flashdeal1s", new EventDAO().getProductInEventRan("3"));
+		request.setAttribute("flashdeal1s", new EventDAO().getProductInEventRan("2"));
 		request.setAttribute("flashdeal2s", new EventDAO().getProductInEventRan("1"));
 		request.setAttribute("SkincareProducts", new ProductDAO().getProductSkinCare());
 		request.setAttribute("MakeupProducts", new ProductDAO().getProductMakeUp());
