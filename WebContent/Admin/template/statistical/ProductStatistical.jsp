@@ -58,7 +58,7 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; margin: 10px; width: 100%">
-					<h1 class="text-center">Danh sách 20 sản phẩm doanh thu cao nhất</h1>
+					<h1 class="text-center">Danh sách 20 sản phẩm bán chạy nhất</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>

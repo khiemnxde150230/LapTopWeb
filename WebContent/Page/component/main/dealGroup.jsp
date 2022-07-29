@@ -34,7 +34,7 @@
 								<a href=""> ${topfive.getTitle() }</a> <span
 									class="pro-selling__price">${topfive.getFormatPriceStandard() }₫</span>
 								<del style="font-size: .9rem;">${topfive.getFormatPriceDefault() }₫</del>
-								<span class="pro-selling__sale">SALE</span>
+								<span class="pro-selling__sale">GIẢM GIÁ</span>
 							</div></li>
 					</php:forEach>
 
@@ -77,7 +77,7 @@
 									</p>
 									<div class="pro-cotton__price">
 										<span class="pro-cotton__price--curr">
-											${product.getFormatPriceStandard() } </span>
+											 ${product.getFormatPriceStandard() }₫</span>
 										<div class="pro-cotton__quantity">
 											<p>${product.getFormatPriceDefault() }₫</p>
 											<span class="pro-cotton__quantity--selled">Đã bán

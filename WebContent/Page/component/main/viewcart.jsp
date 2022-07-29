@@ -25,7 +25,7 @@
 					<div class="menu-product">Sản phẩm</div>
 				</div>
 				<div class="col-lg-2">
-					<div class="menu-product__quan">Category</div>
+					<div class="menu-product__quan">Danh mục</div>
 				</div>
 				<div class="col-lg-2">
 					<div class="menu-product__price">Đơn giá</div>

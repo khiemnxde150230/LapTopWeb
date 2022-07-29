@@ -36,7 +36,7 @@
 <link type="text/css" rel="stylesheet"
 	href="Page/css/nouislider.min.css" />
 <link rel="stylesheet" href="Page/css/font-awesome.min.css">
-<title>Login Flap Shop</title>
+<title>Login FlapShop</title>
 </head>
 <body>
 
@@ -82,7 +82,7 @@
 <script src="./js/web.js"></script>
 <script>
 	function ngu() {
-		alert('Quên mật khẩu là ngu');
+		alert('Liên hệ 1900 6969 để được hỗ trợ');
 	}
 </script>
 </html>

@@ -5,7 +5,7 @@
 <div class="product-norm">
 	<div class="product-norm__header">
 		<div class="product-norm__tilte">
-			<h4>SẢN PHẨM LAPTOP</h4>
+			<h4>LAPTOP BÁN CHẠY</h4>
 		</div>
 	</div>
 	<ul class="product-norm__nav">

@@ -85,15 +85,7 @@
 								</div>
 							</div></li>
 					</ul>
-					<ul class="header-search-and-cart">
-						<li class="header-nav__parent"><a href=""
-							class="header-search__icon"> <i class="fas fa-search"></i>
-						</a></li class="header-nav__parent">
-						<li class="cart-header-right" style="position: relative"><a
-							href="cart" class="header-cart__icon"> <i
-								class="fas fa-shopping-cart"></i>
-						</a> <%@include file="headerCartDiv.jsp"%></li>
-					</ul>
+					
 				</div>
 			</div>
 		</div>

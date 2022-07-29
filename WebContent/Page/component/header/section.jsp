@@ -15,7 +15,7 @@
 					</div>
 					<div class="shop-body">
 						<h3>
-							Danh mục <br>LapTop Gaming
+							Danh mục <br>Laptop Gaming
 						</h3>
 						<a href="./category?id=2" class="cta-btn">Mua ngay <i
 							class="fa fa-arrow-circle-right"></i></a>
@@ -32,7 +32,7 @@
 					</div>
 					<div class="shop-body">
 						<h3>
-							Danh mục<br>Iphone
+							Danh mục<br>iPhone
 						</h3>
 						<a href="./category?id=45" class="cta-btn">Mua ngay <i
 							class="fa fa-arrow-circle-right"></i></a>

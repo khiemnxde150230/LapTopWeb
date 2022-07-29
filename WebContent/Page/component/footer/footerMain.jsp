@@ -11,7 +11,7 @@
 						<a href="#" class="footer-hotline__icon"> <i
 							class="fas fa-phone-alt"></i>
 						</a>
-						<p>Hotline: 1900 636 510 (Giờ Mở Cửa 9:00 - 21:30)</p>
+						<p>Hotline: 1900 6969 (Giờ mở cửa 07:30 - 22:30)</p>
 						<php:set var="loginSession" value="${sessionScope.loginSession}">
 						</php:set>
 
@@ -22,7 +22,7 @@
 					<div class="footer-user">
 						<a href="" class="footer-user__icon"> <i class="fas fa-user"></i>
 						</a>
-						<p>Hỗ Trợ Đơn Hàng: Thegioiskinfood@Gmail.Com</p>
+						<p>Hỗ trợ đơn hàng: flapshop@gmail.com</p>
 					</div>
 				</div>
 				<div class="col-lg-3">
@@ -30,7 +30,7 @@
 						<a href="" class="footer-mail__icon"> <i
 							class="far fa-envelope"></i>
 						</a>
-						<p>Liên Hệ Hợp Tác: Sales@Thegioiskinfood.Com</p>
+						<p>Liên hệ hợp tác: sales@flapshop.com</p>
 					</div>
 				</div>
 				<div class="col-lg-3">
@@ -38,8 +38,7 @@
 						<a href="" class="footer-address__icon"> <i
 							class="fas fa-map-marker-alt"></i>
 						</a>
-						<p>365 Lê Văn Sỹ, Phường 12, Quận 3 100 Hoàng Hoa Thám, Phường
-							12, Quận Tân Bình</p>
+						<p>69 Lê Văn Hiến, phường Hòa Hải, quận Ngũ Hành Sơn, thành phố Đà Nẵng</p>
 					</div>
 				</div>
 			</div>
@@ -51,13 +50,13 @@
 				<div class="col-lg-4">
 					<ul class="company">
 						<li>
-							<p>CÔNG TY TNHH MTV THƯƠNG MẠI DỊCH VỤ BLUE OCEAN</p>
+							<p>CÔNG TY TNHH NTV FLAP</p>
 						</li>
 						<li>
-							<p>Giấy CNĐKDN Số: 0316037655 do Sở kế hoạch và đầu tư</p>
+							<p>Giấy CNĐKDN Số: 99999999 do Sở kế hoạch và đầu tư</p>
 						</li>
 						<li>
-							<p>Tp. HCM cấp ngày 25/11/2019</p>
+							<p>TP. Đà Nẵng cấp ngày 10/05/2022</p>
 						</li>
 					</ul>
 				</div>

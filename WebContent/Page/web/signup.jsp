@@ -37,7 +37,7 @@
 <link type="text/css" rel="stylesheet"
 	href="Page/css/nouislider.min.css" />
 <link rel="stylesheet" href="Page/css/font-awesome.min.css">
-<title>Signup Dangu</title>
+<title>Signup FlapShop</title>
 </head>
 <body>
 

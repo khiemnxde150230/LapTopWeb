@@ -58,7 +58,7 @@
 			<div class="main-panel">
 				<div class="content-wrapper"
 					style="padding: 20px; width: 100%">
-					<h1 class="text-center">Danh sách sản phẩm</h1>
+					<h1 class="text-center">Danh sách sự kiện</h1>
 					<table
 						class="table table-striped table-hover table-bordered text-center">
 						<tr>

@@ -161,7 +161,7 @@
 							<div class="text-center add-to-cart-btn col-md-4"
 								style="line-height: 36px"
 								onclick="checkNumber(${productDetail.getQtt()})">
-								<i class="fa fa-shopping-cart"></i> add to cart
+								<i class="fa fa-shopping-cart"></i> thêm vào giỏ
 							</div>
 							<!-- 
 							<div class="col-md-6">

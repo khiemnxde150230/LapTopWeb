@@ -76,9 +76,9 @@
 				<div class="row">
 					<label for="" class="col-md-6">Nhập mã giảm giá: </label> <input
 						style="width: 150px" type="text" name="magiamgia" id="magiamgia"
-						placeholder="Nhập mã vô đây !!!">
+						placeholder="Nhập mã giảm giá">
 					<div class="btn btn-danger" onclick="discountCoupon()"
-						style="width: 100px; height: 35px;">Áp mã!</div>
+						style="width: 100px; height: 35px;">Áp dụng</div>
 				</div>
 				<div class="row" style="width: 600px">
 					<textarea name="orderNote" wrap="off" cols="28" rows="5"

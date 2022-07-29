@@ -1,5 +1,5 @@
 /* COUNTDOWN */
-var countDownDate = new Date("Dec 5, 2022 12:00:00").getTime();
+var countDownDate = new Date("Sep 5, 2022 12:00:00").getTime();
 console.log(countDownDate);
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -18,10 +18,10 @@ var x = setInterval(function() {
 
 	// Output the result in an element with id="demo"
 	if (document.getElementById("countdown-days") != null) {
-		document.getElementById("countdown-days").innerHTML = days + " days";
-		document.getElementById("countdown-hours").innerHTML = hours + " hours";
-		document.getElementById("countdown-minutes").innerHTML = minutes + " minutes";
-		document.getElementById("countdown-seconds").innerHTML = seconds + " seconds";
+		document.getElementById("countdown-days").innerHTML = days + " ngày";
+		document.getElementById("countdown-hours").innerHTML = hours + " giờ";
+		document.getElementById("countdown-minutes").innerHTML = minutes + " phút";
+		document.getElementById("countdown-seconds").innerHTML = seconds + " giây";
 		
 		document.getElementById("counth").innerHTML = hours;
 		document.getElementById("countm").innerHTML = minutes;

@@ -7,14 +7,13 @@
 	<div id="top-header">
 		<div class="container">
 			<ul class="header-links pull-left">
-				<li><a href="#"><i class="fa fa-phone"></i> 0827299123</a></li>
+				<li><a href="#"><i class="fa fa-phone"></i>0961774218</a></li>
 				<li><a href="#"><i class="fa fa-envelope-o"></i>
-						flapteam@gmail.com</a></li>
-				<li><a href="#"><i class="fa fa-map-marker"></i> Ngu Hanh
-						Son, Da Nang</a></li>
+						flapshop@gmail.com</a></li>
+				<li><a href="#"><i class="fa fa-map-marker"></i>Ngũ Hành Sơn, Đà Nẵng</a></li>
 			</ul>
 			<ul class="header-links pull-right">
-				<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
+				<li><a href="#"><i class="fa">₫</i>VND</a></li>
 				<li class="contact-account">
 					
 					<php:if
@@ -99,9 +98,9 @@
 					<div class="header-search">
 						<form action="search" method="get">
 							<select class="input-select">
-								<option value="0">Tất cả danh mục</option>
-								<option value="1">Tất cả danh mục</option>
-								<option value="1">Tất cả danh mục</option>
+								<option value="0">Danh mục</option>
+								<option value="1">Danh mục 1</option>
+								<option value="1">Danh mục 2</option>
 							</select> <input class="input header_search_input" name="key" placeholder="Nhập từ khóa">
 							<button class="search-btn">Tìm kiếm</button>
 						</form>

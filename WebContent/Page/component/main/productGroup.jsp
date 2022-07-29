@@ -35,7 +35,7 @@
 								<a href=""> ${topfive.getTitle() }</a> <span
 									class="pro-selling__price">${topfive.getFormatPriceStandard() }₫</span>
 								<del style="font-size: .9rem;">${topfive.getFormatPriceDefault() }₫</del>
-								<span class="pro-selling__sale">SALE</span>
+								<span class="pro-selling__sale">GIẢM GIÁ</span>
 							</div></li>
 					</php:forEach>
 
@@ -100,7 +100,7 @@
 									<php:if test="${product.getDiscount() != 0}">
 										<div class="product-label">
 											<span class="sale">-${product.getDiscount() }%</span> <span
-												class="new">NEW</span>
+												class="new">MỚI</span>
 										</div>
 									</php:if>
 								</div>
@@ -110,13 +110,13 @@
 										<a href="product_detail?id=${product.getId() }">${product.getTitle() }</a>
 									</h3>
 									<h4 class="product-price">
-										$ ${product.getFormatPriceStandard() }
+										₫ ${product.getFormatPriceStandard() }
 										<php:if test="${product.getDiscount() != 0 }">
 											<del class="product-old-price">$
 												${product.getFormatPriceDefault() }</del>
 										</php:if>
 									</h4>
-									<p>Sold: ${product.getSold() }</p>
+									<p>Đã bán: ${product.getSold() }</p>
 									<div class="product-rating">
 										<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 											class="fa fa-star"></i> <i class="fa fa-star"></i> <i
@@ -124,16 +124,13 @@
 									</div>
 									<div class="product-btns">
 										<button class="add-to-wishlist">
-											<i class="fa fa-heart-o"></i><span class="tooltipp">add
-												to wishlist</span>
+											<i class="fa fa-heart-o"></i><span class="tooltipp">Thêm vào yêu thích</span>
 										</button>
 										<button class="add-to-compare">
-											<i class="fa fa-exchange"></i><span class="tooltipp">add
-												to compare</span>
+											<i class="fa fa-exchange"></i><span class="tooltipp">So sánh</span>
 										</button>
 										<button class="quick-view">
-											<i class="fa fa-eye"></i><span class="tooltipp">quick
-												view</span>
+											<i class="fa fa-eye"></i><span class="tooltipp">Xem nhanh</span>
 										</button>
 									</div>
 								</div>

@@ -59,9 +59,9 @@
 		</a>
 			<div class="collapse" id="ui-basic">
 				<ul class="nav flex-column sub-menu">
-					<li class="nav-item"><a class="nav-link" href="updateQtt">Thêm sản phẩm</a></li>
+					<li class="nav-item"><a class="nav-link" href="updateQtt">Thêm số lượng sản phẩm</a></li>
 					<li class="nav-item"><a class="nav-link" href="stcalProduct">Thống kê sản phẩm</a></li>
-					<li class="nav-item"><a class="nav-link" href="order">Châp thuận đơn hàng</a></li>
+					<li class="nav-item"><a class="nav-link" href="order">Xác nhận đơn hàng</a></li>
 				</ul>
 			</div></li>
 		<li class="nav-item"><a class="nav-link"
