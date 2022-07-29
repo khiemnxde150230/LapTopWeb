@@ -38,7 +38,7 @@
 						<a href="" class="footer-address__icon"> <i
 							class="fas fa-map-marker-alt"></i>
 						</a>
-						<p>69 Lê Văn Hiến, phường Hòa Hải, quận Ngũ Hành Sơn, thành phố Đà Nẵng</p>
+						<p>69 Lê Văn Hiến, phường Hòa Hải, quận Ngũ Hành Sơn, tp. Đà Nẵng</p>
 					</div>
 				</div>
 			</div>
